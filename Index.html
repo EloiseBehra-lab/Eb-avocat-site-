@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EB Avocat – Me Eloïse Behra, Avocate à Liévin</title>
+  <meta name="description" content="Cabinet EB Avocat – Me Eloïse Behra, avocate en droit pénal et en droit de la famille à Liévin (62), Barreau de Béthune.">
+  <style>
+    :root {
+      --blue-dark:#0d1020;
+      --blue:#1f2940;
+      --gold:#c8a56b;
+      --gold-soft:#e5d5af;
+      --bg:#f4f5f8;
+      --text:#1f1f21;
+      --muted:#6b6c75;
+      --white:#ffffff;
+      --shadow-soft:0 10px 30px rgba(0,0,0,0.12);
+      --radius:14px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit;}
+    .container{max-width:1120px;margin:0 auto;padding:0 1.5rem;}
+    section{padding:4.5rem 0;}
+    @media(min-width:900px){section{padding:5.5rem 0;}}
+
+    /* HEADER */
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(13,16,32,0.96);
+      backdrop-filter:blur(12px);
+      color:var(--white);
+      box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0;
+    }
+    .logo-wrap{display:flex;align-items:center;gap:0.75rem;}
+    .logo-mark{
+      width:40px;height:40px;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.35);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;letter-spacing:0.08em;font-size:0.9rem;
+      background:radial-gradient(circle at 20% 0,#fefefe 0,#9b814b 16%,#0d1020 60%,#05060b 100%);
+      color:#fdfdfd;
+    }
+    .logo-text-main{
+      font-size:0.95rem;letter-spacing:0.25em;text-transform:uppercase;font-weight:600;
+    }
+    .logo-text-sub{font-size:0.8rem;color:#d3d4df;}
+    nav{display:none;align-items:center;gap:1.8rem;font-size:0.9rem;}
+    nav a{position:relative;padding-bottom:0.15rem;color:#f1f2f7;}
+    nav a::after{
+      content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+      background:var(--gold);transition:width 0.2s ease-out;
+    }
+    nav a:hover::after{width:100%;}
+    .nav-cta{
+      padding:0.55rem 1.15rem;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.7);font-size:0.85rem;
+    }
+    .nav-toggle{
+      border:none;background:none;display:inline-flex;flex-direction:column;gap:4px;cursor:pointer;
+    }
+    .nav-toggle span{width:20px;height:2px;background:#f4f5ff;}
+    .mobile-nav{
+      display:none;flex-direction:column;gap:0.75rem;
+      padding:0 0 0.9rem 0;font-size:0.9rem;
+    }
+    .mobile-nav a{color:#f6f7ff;}
+    .mobile-nav-visible{display:flex;}
+    @media(min-width:900px){
+      nav{display:flex;}
+      .nav-toggle{display:none;}
+      .mobile-nav{display:none!important;}
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;overflow:hidden;
+      background:
+       radial-gradient(circle at top left,rgba(200,165,107,0.24) 0,transparent 55%),
+       radial-gradient(circle at bottom right,rgba(33,42,78,0.95) 0,#05060b 52%);
+      color:var(--white);
+    }
+    .hero-inner{
+      position:relative;display:grid;gap:2.6rem;align-items:center;z-index:1;
+    }
+    .hero-logo-bg{
+      position:absolute;right:-40px;top:-40px;width:320px;height:320px;
+      opacity:0.18;pointer-events:none;
+    }
+    .hero-tag{
+      display:inline-flex;align-items:center;gap:0.5rem;
+      padding:0.25rem 0.9rem;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.26);
+      font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;
+      color:#d6d7eb;margin-bottom:1rem;
+      background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(0,0,0,0));
+    }
+    .hero-tag-dot{
+      width:8px;height:8px;border-radius:999px;background:#35e1b8;
+      box-shadow:0 0 0 4px rgba(53,225,184,0.25);
+    }
+    .hero h1{font-size:2.25rem;line-height:1.15;margin-bottom:0.75rem;}
+    .hero h1 span{
+      display:block;font-size:1.05rem;font-weight:400;
+      color:#d1d3ea;margin-top:0.25rem;
+    }
+    .hero-lead{
+      font-size:1rem;color:#d8daef;max-width:32rem;margin-bottom:1.75rem;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:0.8rem;margin-bottom:1.75rem;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:0.75rem 1.4rem;border-radius:999px;font-size:0.95rem;
+      cursor:pointer;border:none;
+      transition:transform 0.15s ease-out,box-shadow 0.15s ease-out,background 0.15s,color 0.15s;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+      color:#151010;box-shadow:var(--shadow-soft);
+    }
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 35px rgba(0,0,0,0.35);}
+    .btn-outline{
+      border-radius:999px;border:1px solid rgba(255,255,255,0.8);
+      background:transparent;color:#f5f5ff;
+    }
+    .btn-outline:hover{background:rgba(255,255,255,0.08);}
+    .hero-meta{
+      display:flex;flex-wrap:wrap;gap:1.6rem;font-size:0.86rem;color:#cdd0ea;
+    }
+    .hero-meta strong{display:block;font-size:0.9rem;color:#ffffff;margin-bottom:0.2rem;}
+    .hero-panel{
+      border-radius:20px;
+      background:radial-gradient(circle at top left,rgba(231,215,179,0.18) 0,rgba(11,14,30,0.98) 40%,#070816 100%);
+      border:1px solid rgba(255,255,255,0.12);
+      padding:1.5rem 1.6rem;box-shadow:var(--shadow-soft);
+    }
+    .hero-panel-title{
+      font-size:0.85rem;text-transform:uppercase;letter-spacing:0.18em;
+      color:#c7c9e7;margin-bottom:0.9rem;
+    }
+    .hero-panel-grid{
+      display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:0.9rem 1.5rem;font-size:0.9rem;
+    }
+    .hero-panel-label{
+      font-size:0.78rem;text-transform:uppercase;letter-spacing:0.14em;color:#a9aac9;
+    }
+    .hero-panel-value{color:#f4f4ff;font-weight:500;}
+    .hero-panel-note{font-size:0.78rem;color:#aeb0d0;margin-top:1rem;}
+    @media(min-width:900px){
+      .hero-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);}
+      .hero h1{font-size:2.5rem;}
+      .hero-logo-bg{right:-20px;top:-20px;width:360px;height:360px;}
+    }
+
+    /* SECTIONS */
+    .section-header{margin-bottom:2.3rem;}
+    .section-kicker{
+      font-size:0.78rem;text-transform:uppercase;letter-spacing:0.18em;
+      color:var(--muted);margin-bottom:0.35rem;
+    }
+    .section-title{font-size:1.5rem;color:var(--blue-dark);margin-bottom:0.4rem;}
+    .section-subtitle{font-size:0.95rem;color:var(--muted);max-width:40rem;}
+
+    .grid-2{display:grid;gap:2rem;}
+    @media(min-width:900px){
+      .grid-2{grid-template-columns:minmax(0,3fr) minmax(0,2.5fr);}
+    }
+
+    .card{
+      background:var(--white);border-radius:var(--radius);
+      padding:1.8rem 1.9rem;box-shadow:var(--shadow-soft);
+      border:1px solid rgba(15,20,38,0.04);
+    }
+    .card h3{font-size:1.05rem;margin-bottom:0.7rem;color:var(--blue-dark);}
+    .chip-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.9rem;}
+    .chip{
+      font-size:0.78rem;padding:0.3rem 0.8rem;border-radius:999px;
+      border:1px solid #dedfe8;background:#fafbff;color:var(--muted);
+    }
+
+    /* DOMAINES */
+    .domains{background:#ffffff;}
+    .domain-grid{display:grid;gap:1.7rem;}
+    @media(min-width:900px){
+      .domain-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    .domain-card{
+      border-radius:var(--radius);padding:1.7rem 1.8rem;
+      background:#f9fafc;border:1px solid #e2e3ee;
+      box-shadow:0 8px 24px rgba(0,0,0,0.04);
+    }
+    .domain-tag{
+      font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;
+      color:var(--muted);margin-bottom:0.4rem;
+    }
+    .domain-card h3{font-size:1.1rem;margin-bottom:0.55rem;color:var(--blue-dark);}
+    .domain-card ul{list-style:none;margin-top:0.4rem;font-size:0.92rem;}
+    .domain-card ul li{
+      margin-bottom:0.25rem;padding-left:1rem;position:relative;
+    }
+    .domain-card ul li::before{
+      content:"•";position:absolute;left:0.1rem;color:var(--gold);
+    }
+    .domain-note{font-size:0.83rem;color:var(--muted);margin-top:0.7rem;}
+
+    /* RDV */
+    .rdv{background:linear-gradient(135deg,#11172b,#1f2940);color:var(--white);}
+    .rdv .section-title{color:#ffffff;}
+    .rdv .section-subtitle{color:#d9dbee;}
+    .rdv-inner{display:grid;gap:1.8rem;}
+    @media(min-width:900px){
+      .rdv-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.2fr);}
+    }
+    .rdv-card{
+      border-radius:var(--radius);padding:1.7rem 1.8rem;
+      background:radial-gradient(circle at top left,rgba(231,215,179,0.18) 0,rgba(11,14,30,0.98) 40%,#070816 100%);
+      border:1px solid rgba(255,255,255,0.12);box-shadow:var(--shadow-soft);
+    }
+    .rdv-list{list-style:none;font-size:0.92rem;margin-top:0.4rem;}
+    .rdv-list li{
+      margin-bottom:0.25rem;padding-left:1.1rem;position:relative;
+    }
+    .rdv-list li::before{
+      content:"•";position:absolute;left:0.25rem;color:var(--gold-soft);
+    }
+
+    /* CONTACT */
+    .contact-grid{display:grid;gap:1.7rem;}
+    @media(min-width:900px){
+      .contact-grid{grid-template-columns:minmax(0,2.3fr) minmax(0,3fr);}
+    }
+    .contact-label{
+      font-size:0.8rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);
+    }
+    .contact-value{font-weight:500;margin-bottom:0.5rem;}
+    form{display:grid;gap:0.95rem;}
+    .form-row{display:grid;gap:0.95rem;}
+    @media(min-width:700px){
+      .form-row{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    label{font-size:0.85rem;display:block;margin-bottom:0.1rem;}
+    input,textarea{
+      width:100%;border-radius:9px;border:1px solid #d6d7e4;
+      padding:0.6rem 0.7rem;font:inherit;resize:vertical;min-height:42px;
+      background:#fbfbff;
+    }
+    input:focus,textarea:focus{
+      outline:2px solid var(--blue);outline-offset:1px;border-color:transparent;
+    }
+    textarea{min-height:110px;}
+    .form-hint{font-size:0.8rem;color:var(--muted);}
+
+    /* LEGAL */
+    .legal{background:#ffffff;border-top:1px solid #e1e2ec;}
+    .legal-text{
+      font-size:0.85rem;color:#55566a;max-width:50rem;
+    }
+    .legal-text p{margin-bottom:0.5rem;}
+    .legal-text strong{color:var(--blue-dark);}
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid #dee0eb;padding:1.6rem 0;
+      font-size:0.84rem;color:var(--muted);background:#f8f8fb;
+    }
+    .footer-inner{
+      display:flex;flex-direction:column;gap:0.35rem;
+    }
+    @media(min-width:800px){
+      .footer-inner{flex-direction:row;align-items:center;justify-content:space-between;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <div class="logo-mark">EB</div>
+        <div>
+          <div class="logo-text-main">EB AVOCAT</div>
+          <div class="logo-text-sub">Me Eloïse Behra – Liévin</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#presentation">Présentation</a>
+        <a href="#domaines">Domaines</a>
+        <a href="#rdv">Rendez-vous</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#accueil">Accueil</a>
+      <a href="#presentation">Présentation</a>
+      <a href="#domaines">Domaines</a>
+      <a href="#rdv">Rendez-vous</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Logo justice en fond -->
+        <svg class="hero-logo-bg" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="justiceGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f3e3b8"/>
+              <stop offset="40%" stop-color="#d3b978"/>
+              <stop offset="100%" stop-color="#9e7c3e"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#justiceGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="100" y1="30" x2="100" y2="150"/>
+            <line x1="70" y1="50" x2="130" y2="50"/>
+            <path d="M70 50 L55 95 A20 12 0 0 0 85 95 Z"/>
+            <path d="M130 50 L115 95 A20 12 0 0 0 145 95 Z"/>
+            <circle cx="70" cy="50" r="3"/>
+            <circle cx="130" cy="50" r="3"/>
+            <circle cx="100" cy="30" r="4"/>
+            <path d="M80 150 H120"/>
+            <path d="M70 160 H130"/>
+          </g>
+        </svg>
+
+        <div>
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            Avocate en droit pénal & droit de la famille – Liévin (62)
+          </div>
+          <h1>
+            Me Eloïse Behra
+            <span>Une défense engagée et humaine à vos côtés.</span>
+          </h1>
+          <p class="hero-lead">
+            Cabinet EB Avocat – accompagnement des justiciables confrontés à une procédure pénale
+            ou à une situation familiale sensible, avec rigueur, clarté et écoute.
+          </p>
+          <div class="hero-actions">
+            <a href="#rdv" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="tel:0634533246" class="btn btn-outline">Appeler le cabinet</a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              <strong>Droit pénal</strong>
+              Garde à vue, tribunal correctionnel, victimes, aménagement de peine…
+            </div>
+            <div>
+              <strong>Droit de la famille</strong>
+              Divorce, séparation, enfants, pensions, violences intrafamiliales…
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Informations clés du cabinet">
+          <div class="hero-panel-title">Cabinet EB Avocat</div>
+          <div class="hero-panel-grid">
+            <div>
+              <div class="hero-panel-label">Ville</div>
+              <div class="hero-panel-value">Liévin (62)</div>
+            </div>
+            <div>
+              <div class="hero-panel-label">Barreau</div>
+              <div class="hero-panel-value">Béthune</div>
+            </div>
+            <div>
+              <div class="hero-panel-label">Domaines</div>
+              <div class="hero-panel-value">Pénal & Famille</div>
+            </div>
+            <div>
+              <div class="hero-panel-label">Rendez-vous</div>
+              <div class="hero-panel-value">Cabinet / Téléphone / Visio</div>
+            </div>
+          </div>
+          <p class="hero-panel-note">
+            Un outil de prise de rendez-vous en ligne pourra être ajouté pour réserver directement un créneau
+            dans l’agenda du cabinet.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÉSENTATION -->
+  <section id="presentation">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Le cabinet</div>
+        <h2 class="section-title">Une approche moderne, exigeante et humaine</h2>
+        <p class="section-subtitle">
+          À chaque dossier, l’objectif est le même : défendre vos droits avec sérieux, tout en vous offrant
+          une écoute attentive et des explications claires sur les enjeux juridiques.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Me Eloïse Behra</h3>
+          <p>
+            Avocate en <strong>droit pénal</strong> et en <strong>droit de la famille</strong>, j’accompagne
+            les justiciables à Liévin et dans l’ensemble du Pas-de-Calais.
+          </p>
+          <p>
+            Mon rôle : vous écouter, analyser votre situation, vous expliquer les différentes options,
+            leurs risques et leurs conséquences, puis construire avec vous une stratégie adaptée.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Écoute</span>
+            <span class="chip">Clarté</span>
+            <span class="chip">Engagement</span>
+            <span class="chip">Confidentialité</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Fonctionnement du cabinet</h3>
+          <p>
+            Un premier rendez-vous permet de faire le point sur votre situation (procédure en cours,
+            documents, délais) et de définir les prochaines étapes.
+          </p>
+          <p>
+            Une convention d’honoraires vous est présentée pour vous garantir une transparence complète
+            sur le coût de l’intervention.
+          </p>
+          <div class="chip-row">
+            <span class="chip">Convention d’honoraires</span>
+            <span class="chip">Stratégie sur mesure</span>
+            <span class="chip">Suivi du dossier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAINES -->
+  <section id="domaines" class="domains">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Domaines de compétence</div>
+        <h2 class="section-title">Droit pénal & droit de la famille</h2>
+        <p class="section-subtitle">
+          Le cabinet intervient principalement pour les particuliers confrontés à une procédure pénale
+          ou à une réorganisation de leur vie familiale.
+        </p>
+      </div>
+
+      <div class="domain-grid">
+        <article class="domain-card">
+          <div class="domain-tag">Droit pénal</div>
+          <h3>Défense pénale & assistance des victimes</h3>
+          <p>
+            Que vous soyez mis en cause ou victime, vous êtes accompagné(e) à chaque étape de la procédure.
+          </p>
+          <ul>
+            <li>Garde à vue, audition libre</li>
+            <li>Enquête préliminaire, information judiciaire</li>
+            <li>Convocation devant le tribunal correctionnel</li>
+            <li>Procédure de comparution sur reconnaissance préalable de culpabilité (CRPC)</li>
+            <li>Assistance des victimes et demande de réparation du préjudice</li>
+            <li>Exécution et aménagement de peine</li>
+          </ul>
+          <p class="domain-note">
+            En matière pénale, les délais sont souvent très courts : il est recommandé de consulter dès
+            que possible.
+          </p>
+        </article>
+
+        <article class="domain-card">
+          <div class="domain-tag">Droit de la famille</div>
+          <h3>Divorce, séparation & protection de la famille</h3>
+          <p>
+            Accompagnement dans les situations de séparation et de réorganisation de la vie familiale.
+          </p>
+          <ul>
+            <li>Divorce amiable (par consentement mutuel) ou contentieux</li>
+            <li>Séparation hors mariage, rupture de PACS</li>
+            <li>Résidence des enfants, droit de visite et d’hébergement</li>
+            <li>Pensions alimentaires</li>
+            <li>Violences intrafamiliales</li>
+            <li>Partage et liquidation du patrimoine</li>
+          </ul>
+          <p class="domain-note">
+            L’objectif est de défendre vos intérêts tout en prenant en compte, lorsque cela est possible,
+            l’équilibre des enfants et de la famille.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RDV -->
+  <section id="rdv" class="rdv">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Rendez-vous</div>
+        <h2 class="section-title">Prendre rendez-vous avec le cabinet</h2>
+        <p class="section-subtitle">
+          Les rendez-vous peuvent avoir lieu au cabinet à Liévin, par téléphone ou en visioconférence,
+          selon votre situation et vos disponibilités.
+        </p>
+      </div>
+
+      <div class="rdv-inner">
+        <div>
+          <p>
+            Un outil de prise de rendez-vous en ligne (Calendly, par exemple) pourra être intégré pour
+            réserver un créneau directement dans l’agenda du cabinet.
+          </p>
+          <p style="margin-top:0.7rem;">
+            En attendant, vous pouvez prendre contact :
+          </p>
+          <ul class="rdv-list">
+            <li>par téléphone, pour convenir d’un horaire ;</li>
+            <li>par e-mail, en décrivant brièvement votre situation ;</li>
+            <li>via le formulaire de contact ci-dessous.</li>
+          </ul>
+          <div style="margin-top:1.4rem;">
+            <a href="#contact" class="btn btn-primary">Contacter le cabinet</a>
+          </div>
+        </div>
+
+        <div class="rdv-card">
+          <h3 style="margin-bottom:0.8rem;">Bouton de prise de rendez-vous en ligne</h3>
+          <p style="font-size:0.9rem;color:#d4d6f0;">
+            Dès que votre compte sur un service de prise de rendez-vous sera créé, ce bouton pourra
+            renvoyer vers votre page de réservation :
+          </p>
+          <div style="margin-top:1.2rem;">
+            <a href="#" class="btn btn-primary" style="font-size:0.9rem;padding:0.6rem 1.2rem;pointer-events:none;opacity:0.7;">
+              Réserver un créneau en ligne
+            </a>
+          </div>
+          <p style="font-size:0.8rem;color:#b9bce6;margin-top:0.8rem;">
+            (Le lien sera activé dès que votre page de réservation sera disponible.)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Contact</div>
+        <h2 class="section-title">Contacter le cabinet</h2>
+        <p class="section-subtitle">
+          Pour toute demande de rendez-vous ou question, vous pouvez utiliser les coordonnées ci-dessous
+          ou le formulaire de contact.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3 style="margin-bottom:0.9rem;">Coordonnées du cabinet</h3>
+          <p>
+            <span class="contact-label">Cabinet</span><br>
+            <span class="contact-value">EB Avocat – Me Eloïse Behra</span>
+          </p>
+          <p>
+            <span class="contact-label">Adresse</span><br>
+            <span class="contact-value">28 rue Antoine Dilly, 62800 Liévin</span>
+          </p>
+          <p>
+            <span class="contact-label">Téléphone</span><br>
+            <span class="contact-value"><a href="tel:0634533246">06 34 53 32 46</a></span>
+          </p>
+          <p>
+            <span class="contact-label">E-mail</span><br>
+            <span class="contact-value"><a href="mailto:Eloisebehra.avocat@gmail.com">Eloisebehra.avocat@gmail.com</a></span>
+          </p>
+          <p>
+            <span class="contact-label">Horaires</span><br>
+            <span class="contact-value">Sur rendez-vous, du lundi au vendredi</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin-bottom:0.9rem;">Formulaire de contact</h3>
+          <p style="font-size:0.88rem;margin-bottom:0.6rem;">
+            Ce formulaire ouvre votre logiciel de messagerie pour envoyer un e-mail au cabinet.
+          </p>
+          <form action="mailto:Eloisebehra.avocat@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+              <div>
+                <label for="nom">Nom et prénom *</label>
+                <input type="text" id="nom" name="Nom" required>
+              </div>
+              <div>
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="Email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="Téléphone">
+              </div>
+              <div>
+                <label for="objet">Objet de la demande</label>
+                <input type="text" id="objet" name="Objet" placeholder="Droit pénal, droit de la famille…">
+              </div>
+            </div>
+            <div>
+              <label for="message">Message *</label>
+              <textarea id="message" name="Message" required placeholder="Expliquez brièvement votre situation."></textarea>
+            </div>
+            <p class="form-hint">
+              Les informations communiquées via ce formulaire sont utilisées uniquement pour le traitement
+              de votre demande et ne sont pas transmises à des tiers.
+            </p>
+            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENTIONS LÉGALES -->
+  <section id="mentions-legales" class="legal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Informations</div>
+        <h2 class="section-title">Mentions légales</h2>
+      </div>
+      <div class="legal-text">
+        <p><strong>Éditeur du site :</strong><br>
+          EB Avocat – Me Eloïse Behra<br>
+          Avocate au Barreau de Béthune<br>
+          28 rue Antoine Dilly, 62800 Liévin<br>
+          SIRET : 879 342 400 00030
+        </p>
+        <p><strong>Responsable de la publication :</strong><br>
+          Me Eloïse Behra
+        </p>
+        <p><strong>Contact :</strong><br>
+          Téléphone : 06 34 53 32 46<br>
+          E-mail : <a href="mailto:Eloisebehra.avocat@gmail.com">Eloisebehra.avocat@gmail.com</a>
+        </p>
+        <p><strong>Hébergement du site :</strong><br>
+          Site destiné à être hébergé via un service d’hébergement en ligne (par exemple GitHub Pages).
+        </p>
+        <p><strong>Données personnelles :</strong><br>
+          Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre
+          à votre demande. Vous disposez d’un droit d’accès, de rectification et de suppression de vos données,
+          que vous pouvez exercer en écrivant à l’adresse e-mail du cabinet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>© EB Avocat – Me Eloïse Behra, Avocate à Liévin.</div>
+      <div><a href="#mentions-legales">Mentions légales</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('mobile-nav-visible');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-nav-visible');
+      });
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerOffset = 70;
+          const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
