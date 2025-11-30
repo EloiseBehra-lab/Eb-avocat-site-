@@ -3,30 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EB Avocat – Maître Eloïse BEHRA, Avocate à Liévin</title>
-  <meta name="description" content="Cabinet EB Avocat – Maître Eloïse Behra, avocate en droit pénal et en droit de la famille à Liévin (62), Barreau de Béthune.">
-
-  <!-- Données structurées LocalBusiness / LegalService -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "EB Avocat - Maître Eloïse Behra",
-    "legalName": "EB Avocat",
-    "telephone": "+33-6-34-53-32-46",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "28 rue Antoine Dilly",
-      "postalCode": "62800",
-      "addressLocality": "Liévin",
-      "addressCountry": "FR"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Liévin"
-    }
-  }
-  </script>
+  <title> EB Avocat – Maître Eloïse BEHRA, Avocate à Liévin 62800</title>
+  <meta name="description" content="Droit des mineurs à Liévin – Maître Eloïse Behra, avocate au Barreau de Béthune, accompagne les mineurs et leurs parents en assistance éducative et en droit pénal des mineurs.">
 
   <style>
     :root {
@@ -54,7 +32,7 @@
     section{padding:4.5rem 0;}
     @media(min-width:900px){section{padding:5.5rem 0;}}
 
-    /* HEADER */
+    /* HEADER (même que le site principal) */
     header{
       position:sticky;top:0;z-index:1000;
       background:rgba(13,16,32,0.96);
@@ -79,12 +57,20 @@
     }
     .logo-text-sub{font-size:0.8rem;color:#d3d4df;}
     nav{display:none;align-items:center;gap:1.8rem;font-size:0.9rem;}
-    nav a{position:relative;padding-bottom:0.15rem;color:#f1f2f7;}
+    nav a{
+      position:relative;padding-bottom:0.15rem;color:#f1f2f7;
+    }
     nav a::after{
       content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
       background:var(--gold);transition:width 0.2s ease-out;
     }
     nav a:hover::after{width:100%;}
+    nav a.is-active{
+      color:#ffffff;
+    }
+    nav a.is-active::after{
+      width:100%;
+    }
     .nav-cta{
       padding:0.55rem 1.15rem;border-radius:999px;
       border:1px solid rgba(255,255,255,0.7);font-size:0.85rem;
@@ -105,22 +91,23 @@
       .mobile-nav{display:none!important;}
     }
 
-    /* HERO */
-    .hero{
+    /* HERO mineurs (fond proche du hero principal) */
+    .hero-minors{
       position:relative;overflow:hidden;
       background:
-       radial-gradient(circle at top left,rgba(200,165,107,0.24) 0,transparent 55%),
-       radial-gradient(circle at bottom right,rgba(33,42,78,0.95) 0,#05060b 52%);
+        radial-gradient(circle at top left,rgba(200,165,107,0.24) 0,transparent 55%),
+        radial-gradient(circle at bottom right,rgba(33,42,78,0.95) 0,#05060b 52%);
       color:var(--white);
     }
-    .hero-inner{
-      position:relative;display:grid;gap:2.6rem;align-items:center;z-index:1;
+    .hero-minors-inner{
+      position:relative;display:grid;gap:2.5rem;align-items:center;z-index:1;
     }
-    .hero-logo-bg{
-      position:absolute;right:-40px;top:-40px;width:320px;height:320px;
-      opacity:0.18;pointer-events:none;
+    @media(min-width:900px){
+      .hero-minors-inner{
+        grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
+      }
     }
-    .hero-tag{
+    .hero-minors-tag{
       display:inline-flex;align-items:center;gap:0.5rem;
       padding:0.25rem 0.9rem;border-radius:999px;
       border:1px solid rgba(255,255,255,0.26);
@@ -128,19 +115,23 @@
       color:#d6d7eb;margin-bottom:1rem;
       background:linear-gradient(90deg,rgba(255,255,255,0.06),rgba(0,0,0,0));
     }
-    .hero-tag-dot{
+    .hero-minors-tag-dot{
       width:8px;height:8px;border-radius:999px;background:#35e1b8;
       box-shadow:0 0 0 4px rgba(53,225,184,0.25);
     }
-    .hero h1{font-size:2.25rem;line-height:1.15;margin-bottom:0.75rem;}
-    .hero h1 span{
-      display:block;font-size:1.05rem;font-weight:400;
-      color:#d1d3ea;margin-top:0.25rem;
+    .hero-minors h1{
+      font-size:2.1rem;line-height:1.15;margin-bottom:0.6rem;
     }
-    .hero-lead{
-      font-size:1rem;color:#d8daef;max-width:32rem;margin-bottom:1.75rem;
+    .hero-minors h1 span{
+      display:block;font-size:1.02rem;font-weight:400;
+      color:#d1d3ea;margin-top:0.3rem;
     }
-    .hero-actions{display:flex;flex-wrap:wrap;gap:0.8rem;margin-bottom:1.75rem;}
+    .hero-minors-lead{
+      font-size:0.98rem;color:#d8daef;max-width:34rem;margin-bottom:1.6rem;
+    }
+    .hero-actions{
+      display:flex;flex-wrap:wrap;gap:0.8rem;margin-bottom:1.5rem;
+    }
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:0.75rem 1.4rem;border-radius:999px;font-size:0.95rem;
@@ -159,31 +150,30 @@
     }
     .btn-outline:hover{background:rgba(255,255,255,0.08);}
 
-    .hero-meta{
-      display:flex;flex-wrap:wrap;gap:1.6rem;font-size:0.86rem;color:#cdd0ea;
+    .hero-minors-meta{
+      display:flex;flex-wrap:wrap;gap:1.4rem;font-size:0.86rem;color:#cdd0ea;
     }
-    .hero-meta strong{display:block;font-size:0.9rem;color:#ffffff;margin-bottom:0.2rem;}
+    .hero-minors-meta strong{display:block;font-size:0.9rem;color:#ffffff;margin-bottom:0.2rem;}
 
-    .hero-panel{
+    .hero-minors-panel{
       border-radius:20px;
       background:radial-gradient(circle at top left,rgba(231,215,179,0.18) 0,rgba(11,14,30,0.98) 40%,#070816 100%);
       border:1px solid rgba(255,255,255,0.12);
-      padding:1.5rem 1.6rem;box-shadow:var(--shadow-soft);
+      padding:1.5rem 1.7rem;box-shadow:var(--shadow-soft);
     }
-    .hero-panel-title{
+    .hero-minors-panel-title{
       font-size:0.85rem;text-transform:uppercase;letter-spacing:0.18em;
       color:#c7c9e7;margin-bottom:0.9rem;
     }
-    .hero-panel-grid{
+    .hero-minors-panel-grid{
       display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:0.9rem 1.5rem;font-size:0.9rem;
+      gap:0.8rem 1.3rem;font-size:0.9rem;
     }
-
-    .hero-panel-label{
+    .hero-minors-panel-label{
       font-size:0.78rem;text-transform:uppercase;letter-spacing:0.14em;color:#a9aac9;
     }
-    .hero-panel-value{color:#f4f4ff;font-weight:500;}
-    .hero-panel-note{font-size:0.78rem;color:#aeb0d0;margin-top:1rem;}
+    .hero-minors-panel-value{color:#f4f4ff;font-weight:500;}
+    .hero-minors-panel-note{font-size:0.78rem;color:#aeb0d0;margin-top:1rem;}
 
     /* SECTION HEADERS */
     .section-header{margin-bottom:2.3rem;}
@@ -194,9 +184,15 @@
     .section-title{font-size:1.5rem;color:var(--blue-dark);margin-bottom:0.4rem;}
     .section-subtitle{font-size:0.95rem;color:var(--muted);max-width:40rem;}
 
-    .grid-2{display:grid;gap:2rem;}
+    /* GRIDS + CARDS */
+    .grid-3{
+      display:grid;
+      gap:1.8rem;
+    }
     @media(min-width:900px){
-      .grid-2{grid-template-columns:minmax(0,3fr) minmax(0,2.5fr);}
+      .grid-3{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+      }
     }
 
     .card{
@@ -204,130 +200,123 @@
       padding:1.8rem 1.9rem;box-shadow:var(--shadow-soft);
       border:1px solid rgba(15,20,38,0.04);
     }
-    .card h3{font-size:1.05rem;margin-bottom:0.7rem;color:var(--blue-dark);}
-    .chip-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.9rem;}
-    .chip{
-      font-size:0.78rem;padding:0.3rem 0.8rem;border-radius:999px;
-      border:1px solid #dedfe8;background:#fafbff;color:var(--muted);
+    .card h2, .card h3{color:var(--blue-dark);}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      padding:0.15rem 0.75rem;
+      border-radius:999px;
+      background:#f7f3e8;
+      color:#77592c;
+      font-size:0.76rem;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      margin-bottom:0.75rem;
+    }
+    .badge-dot{
+      width:7px;height:7px;border-radius:999px;background:var(--gold);
+    }
+    .pill-row{
+      display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.8rem;
+    }
+    .pill{
+      font-size:0.78rem;
+      padding:0.25rem 0.75rem;
+      border-radius:999px;
+      background:#f3f4fb;
+      border:1px solid #e1e3f0;
+      color:var(--muted);
     }
 
-    .domains{background:#ffffff;}
-    .domain-grid{display:grid;gap:1.7rem;}
-    @media(min-width:900px){
-      .domain-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    /* TIMELINE */
+    .timeline{
+      margin-top:1.5rem;
+      border-left:2px solid #dde0ee;
+      padding-left:1.4rem;
     }
-
-    .domain-card{
-      border-radius:var(--radius);padding:1.7rem 1.8rem;
-      background:#f9fafc;border:1px solid #e2e3ee;
-      box-shadow:0 8px 24px rgba(0,0,0,0.04);
+    .timeline-step{
+      position:relative;
+      padding-bottom:1.6rem;
     }
-
-    .domain-tag{
-      font-size:0.78rem;text-transform:uppercase;letter-spacing:0.16em;
-      color:var(--muted);margin-bottom:0.4rem;
+    .timeline-step:last-child{
+      padding-bottom:0;
     }
-
-    .rdv{background:linear-gradient(135deg,#11172b,#1f2940);color:var(--white);}
-    .rdv .section-title{color:#ffffff;}
-    .rdv .section-subtitle{color:#d9dbee;}
-
-    .rdv-inner{display:grid;gap:1.8rem;}
-    @media(min-width:900px){
-      .rdv-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.2fr);}
-    }
-
-    .rdv-card{
-      border-radius:var(--radius);padding:1.7rem 1.8rem;
-      background:radial-gradient(circle at top left,rgba(231,215,179,0.18) 0,rgba(11,14,30,0.98) 40%,#070816 100%);
-      border:1px solid rgba(255,255,255,0.12);box-shadow:var(--shadow-soft);
-    }
-
-    /* AVIS */
-    .reviews-section{}
-    .reviews-grid{}
-    .review-card{}
-
-    /* CONTACT */
-    .contact-grid{display:grid;gap:1.7rem;}
-    @media(min-width:900px){
-      .contact-grid{grid-template-columns:minmax(0,2.3fr) minmax(0,3fr);}
-    }
-
-    /* LOCALISEZ-MOI / CARTE */
-    .map-section{
+    .timeline-step::before{
+      content:"";
+      position:absolute;
+      left:-1.55rem;
+      top:0.2rem;
+      width:11px;height:11px;
+      border-radius:999px;
       background:#ffffff;
+      border:2px solid var(--gold);
+      box-shadow:0 0 0 3px rgba(200,165,107,0.2);
     }
-    .map-grid{
+    .timeline-step-title{
+      font-weight:600;
+      color:var(--blue-dark);
+      margin-bottom:0.1rem;
+      font-size:0.96rem;
+    }
+    .timeline-step-tag{
+      font-size:0.78rem;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      color:var(--muted);
+    }
+    .timeline-step-text{
+      font-size:0.9rem;
+      color:var(--muted);
+      margin-top:0.25rem;
+    }
+
+    /* FAQ */
+    .faq-grid{
       display:grid;
-      gap:1.8rem;
+      gap:1.4rem;
     }
     @media(min-width:900px){
-      .map-grid{
-        grid-template-columns:minmax(0,2.3fr) minmax(0,3fr);
+      .faq-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
       }
     }
-    .map-info.card{
-      position:relative;
+    .faq-item{
+      background:var(--white);
+      border-radius:var(--radius);
+      padding:1.3rem 1.4rem;
+      box-shadow:0 8px 24px rgba(0,0,0,0.04);
+      border:1px solid #e1e3f0;
     }
-    .map-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:0.4rem;
-      font-size:0.8rem;
-      text-transform:uppercase;
-      letter-spacing:0.16em;
+    .faq-q{
+      font-weight:600;
+      font-size:0.98rem;
+      color:var(--blue-dark);
+      margin-bottom:0.4rem;
+    }
+    .faq-a{
+      font-size:0.9rem;
       color:var(--muted);
-      margin-bottom:0.6rem;
-    }
-    .map-badge-dot{
-      width:8px;
-      height:8px;
-      border-radius:999px;
-      background:var(--gold);
-      box-shadow:0 0 0 4px rgba(200,165,107,0.25);
-    }
-    .map-card{
-      border-radius:20px;
-      padding:0.25rem;
-      background:radial-gradient(circle at top left,rgba(231,215,179,0.4) 0,rgba(11,14,30,1) 55%,#05060b 100%);
-      box-shadow:0 18px 40px rgba(0,0,0,0.45);
-      border:1px solid rgba(255,255,255,0.08);
-    }
-    .map-embed{
-      border-radius:16px;
-      overflow:hidden;
-      background:#000;
-      min-height:260px;
-    }
-    .map-embed iframe{
-      width:100%;
-      height:100%;
-      border:0;
-      display:block;
-    }
-    .map-links{
-      margin-top:1rem;
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.8rem;
-    }
-    .btn-ghost{
-      border-radius:999px;
-      border:1px solid #d5d6e3;
-      padding:0.55rem 1.15rem;
-      font-size:0.88rem;
-      background:#f7f7fc;
-      cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      gap:0.4rem;
-    }
-    .btn-ghost:hover{
-      background:#ececf7;
     }
 
-    /* FOOTER + LEGAL */
+    /* CTA SECTION */
+    .cta-section{
+      background:linear-gradient(135deg,#11172b,#1f2940);
+      color:#ffffff;
+      text-align:center;
+    }
+    .cta-section .section-title{
+      color:#ffffff;
+    }
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:0.9rem;
+      margin-top:1.4rem;
+    }
+
+    /* FOOTER */
     footer{
       border-top:1px solid #dee0eb;padding:1.6rem 0;
       font-size:0.84rem;color:var(--muted);background:#f8f8fb;
@@ -338,9 +327,6 @@
     @media(min-width:800px){
       .footer-inner{flex-direction:row;align-items:center;justify-content:space-between;}
     }
-
-    .legal{background:#ffffff;border-top:1px solid #e1e2ec;}
-    .legal-text{font-size:0.85rem;color:#55566a;max-width:50rem;}
   </style>
 </head>
 
@@ -357,14 +343,16 @@
         </div>
       </div>
 
+      <!-- Sur cette page, on renvoie vers index.html pour les ancres -->
       <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#presentation">Présentation</a>
-        <a href="#domaines">Domaines</a>
-        <a href="#avis">Avis</a>
-        <a href="#rdv">Rendez-vous</a>
-        <a href="#localisez-moi">Localisez-moi</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="index.html#accueil">Accueil</a>
+        <a href="index.html#presentation">Présentation</a>
+        <a href="index.html#domaines">Domaines</a>
+        <a href="index.html#avis">Avis</a>
+        <a href="index.html#rdv">Rendez-vous</a>
+        <a href="index.html#localisez-moi">Localisez-moi</a>
+        <a href="droit-des-mineurs.html" class="is-active">Droit des mineurs</a>
+        <a href="index.html#contact" class="nav-cta">Contact</a>
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
@@ -373,103 +361,84 @@
     </div>
 
     <nav class="mobile-nav" id="mobileNav">
-      <a href="#accueil">Accueil</a>
-      <a href="#presentation">Présentation</a>
-      <a href="#domaines">Domaines</a>
-      <a href="#avis">Avis</a>
-      <a href="#rdv">Rendez-vous</a>
-      <a href="#localisez-moi">Localisez-moi</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html#accueil">Accueil</a>
+      <a href="index.html#presentation">Présentation</a>
+      <a href="index.html#domaines">Domaines</a>
+      <a href="index.html#avis">Avis</a>
+      <a href="index.html#rdv">Rendez-vous</a>
+      <a href="index.html#localisez-moi">Localisez-moi</a>
+      <a href="droit-des-mineurs.html">Droit des mineurs</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- HERO -->
-  <section id="accueil" class="hero">
+  <!-- HERO DROIT DES MINEURS -->
+  <section class="hero-minors">
     <div class="container">
-      <div class="hero-inner">
-
-        <!-- Logo justice en fond -->
-        <svg class="hero-logo-bg" viewBox="0 0 200 200" aria-hidden="true">
-          <defs>
-            <linearGradient id="justiceGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#f3e3b8"/>
-              <stop offset="40%" stop-color="#d3b978"/>
-              <stop offset="100%" stop-color="#9e7c3e"/>
-            </linearGradient>
-          </defs>
-          <g fill="none" stroke="url(#justiceGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="100" y1="30" x2="100" y2="150"/>
-            <line x1="70" y1="50" x2="130" y2="50"/>
-            <path d="M70 50 L55 95 A20 12 0 0 0 85 95 Z"/>
-            <path d="M130 50 L115 95 A20 12 0 0 0 145 95 Z"/>
-            <circle cx="70" cy="50" r="3"/>
-            <circle cx="130" cy="50" r="3"/>
-            <circle cx="100" cy="30" r="4"/>
-            <path d="M80 150 H120"/>
-            <path d="M70 160 H130"/>
-          </g>
-        </svg>
+      <div class="hero-minors-inner">
 
         <div>
-          <div class="hero-tag">
-            <span class="hero-tag-dot"></span>
-            Avocate en droit pénal & droit de la famille – Liévin (62)
+          <div class="hero-minors-tag">
+            <span class="hero-minors-tag-dot"></span>
+            Assistance éducative • Pénal des mineurs • Jeunes victimes
           </div>
 
           <h1>
-            Maître Eloïse Behra
-            <span>Une défense engagée et humaine à vos côtés.</span>
+            Droit des mineurs
+            <span>Protéger, défendre et accompagner les enfants et les adolescents.</span>
           </h1>
 
-          <p class="hero-lead">
-            Cabinet EB Avocat – accompagnement des justiciables confrontés à une procédure pénale
-            ou à une situation familiale sensible, avec rigueur, clarté et écoute.
+          <p class="hero-minors-lead">
+            Maître Eloïse Behra accompagne les mineurs et leurs parents lorsqu’un enfant est en danger,
+            mis en cause dans une infraction ou victime de violences. L’objectif : sécuriser la situation
+            du mineur et défendre ses droits à chaque étape de la procédure.
           </p>
 
           <div class="hero-actions">
-            <a href="#rdv" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="index.html#rdv" class="btn btn-primary">Prendre rendez-vous</a>
             <a href="tel:0634533246" class="btn btn-outline">Appeler le cabinet</a>
           </div>
 
-          <div class="hero-meta">
+          <div class="hero-minors-meta">
             <div>
-              <strong>Droit pénal</strong>
-              Garde à vue, tribunal correctionnel, mis en cause, victimes, aménagement de peine…
+              <strong>Assistance éducative</strong>
+              Juge des enfants, mesures de protection, AEMO, placements, accompagnement des parents.
             </div>
             <div>
-              <strong>Droit de la famille</strong>
-              Divorce, séparation, enfants, pensions, violences intrafamiliales…
+              <strong>Pénal des mineurs</strong>
+              Mineurs mis en cause, auditions, garde à vue, tribunal pour enfants, sanctions et mesures éducatives.
             </div>
           </div>
         </div>
 
-        <aside class="hero-panel">
-          <div class="hero-panel-title">Cabinet EB Avocat</div>
+        <aside class="hero-minors-panel">
+          <div class="hero-minors-panel-title">Cabinet EB Avocat – Mineurs</div>
 
-          <div class="hero-panel-grid">
+          <div class="hero-minors-panel-grid">
             <div>
-              <div class="hero-panel-label">Ville</div>
-              <div class="hero-panel-value">Liévin (62)</div>
+              <div class="hero-minors-panel-label">Ville</div>
+              <div class="hero-minors-panel-value">Liévin (62)</div>
             </div>
             <div>
-              <div class="hero-panel-label">Barreau</div>
-              <div class="hero-panel-value">Béthune</div>
+              <div class="hero-minors-panel-label">Barreau</div>
+              <div class="hero-minors-panel-value">Béthune</div>
             </div>
             <div>
-              <div class="hero-panel-label">Domaines</div>
-              <div class="hero-panel-value">Pénal & Famille</div>
+              <div class="hero-minors-panel-label">Public</div>
+              <div class="hero-minors-panel-value">Mineurs & parents</div>
             </div>
             <div>
-              <div class="hero-panel-label">Rendez-vous</div>
-              <div class="hero-panel-value">Cabinet / Téléphone / Visio</div>
+              <div class="hero-minors-panel-label">Domaines liés</div>
+              <div class="hero-minors-panel-value">Famille & Pénal</div>
             </div>
           </div>
 
-          <p class="hero-panel-note">
-            Un outil de prise de rendez-vous en ligne permet désormais de réserver directement un créneau.
+          <p class="hero-minors-panel-note">
+            Chaque dossier implique des enjeux humains importants. Le cabinet veille à expliquer simplement
+            la procédure au mineur et à ses représentants légaux.
           </p>
 
         </aside>
@@ -478,74 +447,216 @@
     </div>
   </section>
 
-  <!-- PRESENTATION -->
-  <section id="presentation">
+  <!-- 3 BLOCS : ASSISTANCE ÉDUCATIVE / MINEURS MIS EN CAUSE / VICTIMES -->
+  <section>
     <div class="container">
-
       <div class="section-header">
-        <div class="section-kicker">Le cabinet</div>
-        <h2 class="section-title">Une approche moderne, exigeante et humaine</h2>
+        <div class="section-kicker">Interventions</div>
+        <h2 class="section-title">Les principales situations en droit des mineurs</h2>
         <p class="section-subtitle">
-          À chaque dossier, l’objectif est le même : défendre vos droits avec sérieux, tout en vous offrant
-          une écoute attentive et des explications claires sur les enjeux juridiques.
+          Le droit des mineurs recouvre à la fois la protection des enfants en danger, la défense
+          des mineurs mis en cause pour une infraction et l’accompagnement des jeunes victimes.
         </p>
       </div>
 
-      <div class="grid-2">
+      <div class="grid-3">
 
-        <div class="card">
-          <h3>Maître Eloïse Behra</h3>
+        <article class="card">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Assistance éducative
+          </div>
+          <h3>Mineur en danger & juge des enfants</h3>
           <p>
-            Avocate en <strong>droit pénal</strong> et en <strong>droit de la famille</strong>, j’accompagne
-            les justiciables à Liévin et dans l’ensemble du Pas-de-Calais.
+            Lorsque la santé, la sécurité ou la moralité d’un enfant est menacée, une procédure
+            d’assistance éducative peut être ouverte devant le juge des enfants.
           </p>
-          <p>
-            Mon rôle : vous écouter, analyser votre situation, vous expliquer les différentes options,
-            leurs risques et leurs conséquences, puis construire avec vous une stratégie adaptée.
+          <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted);">
+            Le cabinet intervient pour :
           </p>
+          <ul style="margin-top:0.4rem;font-size:0.9rem;padding-left:1.2rem;color:var(--muted);">
+            <li>Assister les parents à l’audience devant le juge des enfants</li>
+            <li>Accompagner le mineur lors des entretiens et auditions</li>
+            <li>Contester ou adapter une mesure de placement ou d’AEMO</li>
+            <li>Préparer les écrits adressés au juge (observations, demandes d’aménagement…)</li>
+          </ul>
 
-          <div class="chip-row">
-            <span class="chip">Écoute</span>
-            <span class="chip">Clarté</span>
-            <span class="chip">Engagement</span>
-            <span class="chip">Confidentialité</span>
+          <div class="pill-row">
+            <span class="pill">AEMO</span>
+            <span class="pill">Placement</span>
+            <span class="pill">Juge des enfants</span>
+            <span class="pill">Protection du mineur</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Mineur mis en cause
+          </div>
+          <h3>Pénal des mineurs : défense du jeune</h3>
+          <p>
+            Un mineur peut être entendu dans le cadre d’une enquête, placé en garde à vue
+            ou convoqué devant une juridiction spécialisée pour mineurs.
+          </p>
+          <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted);">
+            Le cabinet assure notamment :
+          </p>
+          <ul style="margin-top:0.4rem;font-size:0.9rem;padding-left:1.2rem;color:var(--muted);">
+            <li>Assistance en garde à vue ou lors d’une audition libre</li>
+            <li>Préparation du dossier avec le mineur et ses représentants légaux</li>
+            <li>Défense devant le juge des enfants ou le tribunal pour enfants</li>
+            <li>Suivi de l’exécution des mesures éducatives ou sanctions prononcées</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill">Garde à vue</span>
+            <span class="pill">Tribunal pour enfants</span>
+            <span class="pill">Mesures éducatives</span>
+            <span class="pill">Sanctions adaptées</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Mineur victime
+          </div>
+          <h3>Accompagnement des jeunes victimes</h3>
+          <p>
+            Un enfant ou un adolescent peut être victime de violences, de harcèlement, d’agressions
+            physiques ou sexuelles, parfois au sein même du cadre familial ou scolaire.
+          </p>
+          <p style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted);">
+            Le cabinet intervient pour :
+          </p>
+          <ul style="margin-top:0.4rem;font-size:0.9rem;padding-left:1.2rem;color:var(--muted);">
+            <li>Accompagner le dépôt de plainte ou le signalement</li>
+            <li>Assister le mineur dans la procédure pénale, à chaque audition</li>
+            <li>Constituer le mineur partie civile pour faire reconnaître son statut de victime</li>
+            <li>Solliciter une indemnisation adaptée devant la juridiction compétente</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill">Violences</span>
+            <span class="pill">Harcèlement</span>
+            <span class="pill">Agressions</span>
+            <span class="pill">Partie civile</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE : COMPRENDRE LA PROCÉDURE -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Comprendre la procédure</div>
+        <h2 class="section-title">Les grandes étapes d’un dossier impliquant un mineur</h2>
+        <p class="section-subtitle">
+          Qu’il s’agisse d’assistance éducative ou d’une procédure pénale des mineurs, quelques
+          étapes reviennent fréquemment. Voici un aperçu simplifié pour mieux vous repérer.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="timeline">
+
+          <div class="timeline-step">
+            <div class="timeline-step-tag">Étape 1</div>
+            <div class="timeline-step-title">Premier contact avec le cabinet</div>
+            <p class="timeline-step-text">
+              Un premier échange permet de comprendre la situation du mineur (convocation reçue,
+              danger signalé, plainte déposée, intervention de l’ASE, etc.) et de vérifier les urgences.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-step-tag">Étape 2</div>
+            <div class="timeline-step-title">Analyse des documents & stratégie</div>
+            <p class="timeline-step-text">
+              Les convocations, procès-verbaux, décisions déjà rendues ou comptes rendus éducatifs
+              sont étudiés afin de définir la stratégie : demandes à formuler, éléments à produire,
+              observations à présenter au juge ou à l’autorité d’enquête.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-step-tag">Étape 3</div>
+            <div class="timeline-step-title">Auditions, audiences & accompagnement du mineur</div>
+            <p class="timeline-step-text">
+              Le mineur et ses parents sont préparés à l’audition ou à l’audience. Le cabinet
+              assiste le mineur devant le juge des enfants, le tribunal pour enfants ou lors des
+              entretiens éducatifs, en veillant à ce que sa parole soit entendue et ses droits respectés.
+            </p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-step-tag">Étape 4</div>
+            <div class="timeline-step-title">Décision & suivi des mesures</div>
+            <p class="timeline-step-text">
+              Une fois la décision rendue (mesure éducative, placement, obligation, sanction…), le cabinet
+              en explique la portée et les conséquences, et accompagne les familles pour la mise en œuvre
+              ou les éventuelles voies de recours.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Questions fréquentes</div>
+        <h2 class="section-title">FAQ – Droit des mineurs</h2>
+        <p class="section-subtitle">
+          Quelques réponses aux questions souvent posées par les parents et les jeunes confrontés
+          à une procédure impliquant un mineur.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item">
+          <div class="faq-q">Mon enfant est convoqué devant le juge des enfants, dois-je être présent ?</div>
+          <div class="faq-a">
+            En principe, les parents ou représentants légaux sont convoqués et ont toute leur place dans
+            la procédure. Ils peuvent être assistés d’un avocat, tout comme le mineur. Le cabinet vous
+            accompagne pour préparer cette audience et comprendre les enjeux.
           </div>
         </div>
 
-        <div class="card">
-          <h3>Fonctionnement du cabinet</h3>
+        <div class="faq-item">
+          <div class="faq-q">Un mineur peut-il avoir son propre avocat ?</div>
+          <div class="faq-a">
+            Oui. En matière pénale comme en assistance éducative, le mineur peut être assisté par un avocat
+            qui défend spécifiquement ses intérêts. Selon les situations, l’aide juridictionnelle peut
+            être envisagée. Le cabinet vous renseigne sur les modalités pratiques.
+          </div>
+        </div>
 
-          <p>
-            Un premier rendez-vous permet de faire le point sur votre situation (procédure en cours,
-            documents, délais) et de définir les prochaines étapes.
-          </p>
+        <div class="faq-item">
+          <div class="faq-q">Que faire si je pense que mon enfant est en danger ?</div>
+          <div class="faq-a">
+            Il est possible d’alerter les services compétents (médecin, établissement scolaire, ASE, etc.)
+            et de solliciter des conseils juridiques pour savoir quelles démarches engager. Selon le cas,
+            une procédure devant le juge des enfants peut être ouverte afin de mettre en place des mesures
+            de protection adaptées.
+          </div>
+        </div>
 
-          <p>
-            Une convention d’honoraires vous est présentée pour vous garantir une transparence complète
-            sur le coût de l’intervention.
-          </p>
-
-          <!-- TARIF CONSULTATION -->
-          <p>
-            Le montant de la première consultation au cabinet est fixé à
-            <strong>60&nbsp;€ TTC</strong>. Ce montant n’est pas dû si vous êtes éligible à
-            <strong>l’aide juridictionnelle</strong> ou en cas d’ouverture de dossier.
-          </p>
-
-          <!-- MOYENS DE PAIEMENT -->
-          <p><strong>Moyens de paiement acceptés :</strong></p>
-          <ul style="margin-top:0.4rem;font-size:0.92rem;padding-left:1.2rem;">
-            <li>Espèces</li>
-            <li>Chèque</li>
-            <li>Virement bancaire</li>
-            <li>PayPal</li>
-            <li>Carte bancaire — en sans-contact ou via terminal SumUp</li>
-          </ul>
-
-          <div class="chip-row" style="margin-top:1rem;">
-            <span class="chip">Convention d’honoraires</span>
-            <span class="chip">Stratégie sur mesure</span>
-            <span class="chip">Suivi du dossier</span>
+        <div class="faq-item">
+          <div class="faq-q">Mon enfant est victime de harcèlement, puis-je déposer plainte ?</div>
+          <div class="faq-a">
+            Oui, un mineur victime de harcèlement scolaire ou extra-scolaire peut faire l’objet d’une
+            plainte ou d’un signalement. Le cabinet peut vous aider à préparer cette démarche, accompagner
+            le mineur lors de son audition et demander la reconnaissance de son statut de victime ainsi
+            qu’une éventuelle indemnisation.
           </div>
         </div>
 
@@ -553,392 +664,26 @@
     </div>
   </section>
 
-  <!-- DOMAINES -->
-  <section id="domaines" class="domains">
+  <!-- CTA FINALE -->
+  <section class="cta-section">
     <div class="container">
-
-      <div class="section-header">
-        <div class="section-kicker">Domaines de compétence</div>
-        <h2 class="section-title">Droit pénal & droit de la famille</h2>
-        <p class="section-subtitle">
-          Le cabinet intervient principalement pour les particuliers confrontés à une procédure pénale
-          ou à une réorganisation de leur vie familiale.
+      <div class="section-header" style="margin-bottom:1.8rem;">
+        <div class="section-kicker" style="color:#d9dbee;">Prendre contact</div>
+        <h2 class="section-title">Parler de la situation de votre enfant</h2>
+        <p class="section-subtitle" style="color:#d9dbee;">
+          Chaque situation impliquant un mineur est singulière. Un échange avec le cabinet permet
+          de faire le point, d’identifier les urgences et de définir les premières étapes à envisager.
         </p>
       </div>
 
-      <div class="domain-grid">
-
-        <article class="domain-card">
-          <div class="domain-tag">Droit pénal</div>
-          <h3>Défense pénale & assistance des victimes</h3>
-          <p>
-            Que vous soyez mis en cause ou victime, vous êtes accompagné(e) à chaque étape de la procédure.
-          </p>
-          <ul>
-            <li>Garde à vue, audition libre</li>
-            <li>Enquête préliminaire, information judiciaire</li>
-            <li>Prévenu devant le tribunal correctionnel</li>
-            <li>Procédure de CRPC</li>
-            <li>Assistance des victimes, constitution de partie civile</li>
-            <li>Réparation du préjudice</li>
-            <li>Exécution et aménagement de peine</li>
-          </ul>
-        </article>
-
-        <article class="domain-card">
-          <div class="domain-tag">Droit de la famille</div>
-          <h3>Divorce, séparation & protection de la famille</h3>
-          <p>
-            Accompagnement dans les situations de séparation et de réorganisation de la vie familiale.
-          </p>
-          <ul>
-            <li>Divorce amiable ou contentieux</li>
-            <li>Séparation hors mariage, rupture de PACS</li>
-            <li>Résidence des enfants, droit de visite et d’hébergement</li>
-            <li>Pensions alimentaires</li>
-            <li>Violences intrafamiliales</li>
-            <li>Partage et liquidation du patrimoine</li>
-          </ul>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- AVIS -->
-  <section id="avis" class="reviews-section" style="background:#ffffff;padding:4.5rem 0;">
-    <div class="container">
-
-      <div class="section-header">
-        <div class="section-kicker">Avis clients</div>
-        <h2 class="section-title">Ils ont fait confiance au cabinet</h2>
-        <p class="section-subtitle">
-          Découvrez les témoignages de clients accompagnés par Maître Behra.
-        </p>
-      </div>
-
-      <div class="reviews-grid" style="
-        display:grid;
-        gap:1.8rem;
-        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      ">
-
-        <div class="review-card" style="
-          background:#fafbff;
-          border:1px solid #e4e6f0;
-          border-radius:14px;
-          padding:1.6rem 1.8rem;
-          box-shadow:0 8px 20px rgba(0,0,0,0.06);
-        ">
-          <div style="color:#c8a56b;font-size:1.2rem;margin-bottom:0.4rem;">★★★★★</div>
-          <p style="font-size:0.95rem;color:#333;">
-            « Maître Behra m’a aidée avec beaucoup d’écoute et de professionnalisme. Je recommande vivement son cabinet. »
-          </p>
-          <div style="margin-top:0.8rem;color:#6b6c75;font-size:0.85rem;">— Sophie D.</div>
-        </div>
-
-        <div class="review-card" style="
-          background:#fafbff;
-          border:1px solid #e4e6f0;
-          border-radius:14px;
-          padding:1.6rem 1.8rem;
-          box-shadow:0 8px 20px rgba(0,0,0,0.06);
-        ">
-          <div style="color:#c8a56b;font-size:1.2rem;margin-bottom:0.4rem;">★★★★★</div>
-          <p style="font-size:0.95rem;color:#333;">
-            « Excellent suivi de mon dossier pénal. Avocate réactive, humaine et très professionnelle. »
-          </p>
-          <div style="margin-top:0.8rem;color:#6b6c75;font-size:0.85rem;">— Mehdi B.</div>
-        </div>
-
-        <div class="review-card" style="
-          background:#fafbff;
-          border:1px solid #e4e6f0;
-          border-radius:14px;
-          padding:1.6rem 1.8rem;
-          box-shadow:0 8px 20px rgba(0,0,0,0.06);
-        ">
-          <div style="color:#c8a56b;font-size:1.2rem;margin-bottom:0.4rem;">★★★★★</div>
-          <p style="font-size:0.95rem;color:#333;">
-            « Très bonne avocate, à l’écoute. Les explications sont claires et on se sent en confiance. »
-          </p>
-          <div style="margin-top:0.8rem;color:#6b6c75;font-size:0.85rem;">— L. Martin</div>
-        </div>
-
-      </div>
-
-      <div style="text-align:center;margin-top:2rem;">
-        <a href="https://g.page/r/CTAHLu0pm-laEBE/review"
-           class="btn btn-primary"
-           style="font-size:0.95rem;padding:0.7rem 1.4rem;display:inline-block;">
-          Laisser un avis sur Google
+      <div class="cta-buttons">
+        <a href="index.html#rdv" class="btn btn-primary">
+          Prendre rendez-vous
+        </a>
+        <a href="index.html#contact" class="btn btn-outline">
+          Accéder aux coordonnées complètes
         </a>
       </div>
-
-    </div>
-  </section>
-
-  <!-- RDV -->
-  <section id="rdv" class="rdv">
-    <div class="container">
-
-      <div class="section-header">
-        <div class="section-kicker">Rendez-vous</div>
-        <h2 class="section-title">Prendre rendez-vous avec le cabinet</h2>
-        <p class="section-subtitle">
-          Les rendez-vous peuvent avoir lieu au cabinet à Liévin, par téléphone ou en visioconférence,
-          selon votre situation et vos disponibilités.
-        </p>
-
-        <!-- TARIF RAPPEL RDV -->
-        <p style="margin-top:0.7rem;color:#d9dbee;">
-          La première consultation est facturée <strong>60&nbsp;€ TTC</strong>.
-          Ce montant n’est pas dû si vous êtes éligible à <strong>l’aide juridictionnelle</strong> ou en cas d’ouverture de dossier.
-        </p>
-
-        <!-- MOYENS DE PAIEMENT RDV -->
-        <p style="margin-top:0.4rem;color:#d9dbee;">
-          Les règlements peuvent être effectués en espèces, par chèque, par virement bancaire, via PayPal
-          ou par carte bancaire (en sans-contact ou via terminal SumUp).
-        </p>
-
-      </div>
-
-      <div class="rdv-inner">
-
-        <div>
-          <p>
-            Vous pouvez désormais réserver un créneau directement en ligne via l’outil sécurisé Calendly.
-          </p>
-          <ul class="rdv-list">
-            <li>Choix du type de rendez-vous</li>
-            <li>Disponibilités mises à jour en temps réel</li>
-            <li>Confirmation immédiate par e-mail</li>
-          </ul>
-
-          <div style="margin-top:1.4rem;">
-            <a href="https://calendly.com/eloisebehra-avocat/30min"
-               class="btn btn-primary">
-              Réserver un créneau en ligne
-            </a>
-          </div>
-        </div>
-
-        <div class="rdv-card">
-          <h3 style="margin-bottom:0.8rem;">Rendez-vous en ligne</h3>
-          <p style="font-size:0.9rem;color:#d4d6f0;">
-            Cliquez sur le bouton ci-dessous pour accéder directement à l’agenda en ligne du cabinet.
-          </p>
-
-          <div style="margin-top:1.2rem;">
-            <a href="https://calendly.com/eloisebehra-avocat/30min"
-               class="btn btn-primary"
-               style="font-size:0.9rem;padding:0.6rem 1.2rem;">
-              Accéder à l’agenda
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-
-      <div class="section-header">
-        <div class="section-kicker">Contact</div>
-        <h2 class="section-title">Contacter le cabinet</h2>
-        <p class="section-subtitle">
-          Pour toute demande de rendez-vous ou question, vous pouvez utiliser les coordonnées ci-dessous
-          ou le formulaire de contact.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="card">
-          <h3 style="margin-bottom:0.9rem;">Coordonnées du cabinet</h3>
-
-          <p>
-            <span class="contact-label">Cabinet</span><br>
-            <span class="contact-value">EB Avocat – Maître Eloïse Behra</span>
-          </p>
-
-          <p>
-            <span class="contact-label">Adresse</span><br>
-            <span class="contact-value">28 rue Antoine Dilly, 62800 Liévin</span>
-          </p>
-
-          <p>
-            <span class="contact-label">Téléphone</span><br>
-            <span class="contact-value"><a href="tel:0634533246">06 34 53 32 46</a></span>
-          </p>
-
-          <p>
-            <span class="contact-label">E-mail</span><br>
-            <span class="contact-value">
-              <a href="mailto:eloisebehra.avocat@gmail.com">eloisebehra.avocat@gmail.com</a>
-            </span>
-          </p>
-
-          <p>
-            <span class="contact-label">Horaires</span><br>
-            <span class="contact-value">Sur rendez-vous, du lundi au vendredi</span>
-          </p>
-
-          <p>
-            <a href="#localisez-moi" style="font-size:0.9rem;color:#1f2940;text-decoration:underline;">
-              Voir la carte et l’itinéraire
-            </a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 style="margin-bottom:0.9rem;">Formulaire de contact</h3>
-
-          <p style="font-size:0.88rem;margin-bottom:0.6rem;">
-            Ce formulaire ouvre votre logiciel de messagerie pour envoyer un e-mail au cabinet.
-          </p>
-
-          <form action="mailto:eloisebehra.avocat@gmail.com" method="post" enctype="text/plain">
-            <div class="form-row">
-              <div>
-                <label for="nom">Nom et prénom *</label>
-                <input type="text" id="nom" name="Nom" required>
-              </div>
-
-              <div>
-                <label for="email">E-mail *</label>
-                <input type="email" id="email" name="Email" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label for="telephone">Téléphone</label>
-                <input type="tel" id="telephone" name="Téléphone">
-              </div>
-
-              <div>
-                <label for="objet">Objet</label>
-                <input type="text" id="objet" name="Objet" placeholder="Droit pénal, droit de la famille…">
-              </div>
-            </div>
-
-            <div>
-              <label for="message">Message *</label>
-              <textarea id="message" name="Message" required placeholder="Expliquez votre situation."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">
-              Envoyer le message
-            </button>
-          </form>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LOCALISEZ-MOI -->
-  <section id="localisez-moi" class="map-section">
-    <div class="container">
-
-      <div class="section-header">
-        <div class="section-kicker">Localisez-moi</div>
-        <h2 class="section-title">Venir au cabinet EB Avocat</h2>
-        <p class="section-subtitle">
-          Retrouvez la localisation précise du cabinet de Maître Eloïse Behra à Liévin et accédez en un clic
-          à l’itinéraire via Google Maps. Cette section « Localisez-moi » est pensée pour vous guider
-          facilement jusqu’au cabinet.
-        </p>
-      </div>
-
-      <div class="map-grid">
-
-        <div class="card map-info">
-          <div class="map-badge">
-            <span class="map-badge-dot"></span>
-            Référencement local – Liévin (62800)
-          </div>
-
-          <h3 style="margin-bottom:0.6rem;">Adresse du cabinet</h3>
-          <p style="font-size:0.95rem;margin-bottom:0.8rem;">
-            <strong>EB Avocat – Maître Eloïse Behra</strong><br>
-            28 rue Antoine Dilly<br>
-            62800 Liévin – France
-          </p>
-
-          <p style="font-size:0.9rem;color:#55566a;margin-bottom:0.8rem;">
-            Le cabinet se situe à Liévin, à proximité immédiate de Lens, dans le Pas-de-Calais.
-            L’itinéraire peut être généré automatiquement depuis votre smartphone ou GPS via Google Maps.
-          </p>
-
-          <ul style="margin-top:0.4rem;font-size:0.92rem;padding-left:1.2rem;">
-            <li>Stationnement possible à proximité du cabinet</li>
-            <li>Accès simple depuis Lens et les communes environnantes</li>
-          </ul>
-
-          <div class="map-links">
-            <a class="btn-ghost" href="https://maps.app.goo.gl/UKZHi6WKiahwM3yy5?g_st=com.openai.chat.ShareExtension" target="_blank" rel="noopener noreferrer">
-              Ouvrir dans Google Maps
-            </a>
-            <a class="btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=28+Rue+Antoine+Dilly+62800+Liévin" target="_blank" rel="noopener noreferrer">
-              Itinéraire jusqu’au cabinet
-            </a>
-          </div>
-        </div>
-
-        <div class="map-card">
-          <div class="map-embed">
-            <iframe
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-              src="https://www.google.com/maps?q=28+Rue+Antoine+Dilly+62800+Liévin&hl=fr&z=18&output=embed">
-            </iframe>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- MENTIONS -->
-  <section id="mentions-legales" class="legal">
-    <div class="container">
-
-      <div class="section-header">
-        <div class="section-kicker">Informations</div>
-        <h2 class="section-title">Mentions légales</h2>
-      </div>
-
-      <div class="legal-text">
-        <p><strong>Éditeur :</strong><br>
-          EB Avocat – Maître Eloïse Behra<br>
-          Avocate au Barreau de Béthune<br>
-          28 rue Antoine Dilly, 62800 Liévin<br>
-          SIRET : 879 342 400 00030
-        </p>
-
-        <p><strong>Contact :</strong><br>
-          Téléphone : 06 34 53 32 46<br>
-          E-mail : <a href="mailto:eloisebehra.avocat@gmail.com">eloisebehra.avocat@gmail.com</a>
-        </p>
-
-        <p><strong>Hébergement :</strong><br>
-          GitHub Pages
-        </p>
-
-        <p><strong>Données personnelles :</strong><br>
-          Les informations communiquées via le formulaire sont utilisées uniquement pour répondre
-          à votre demande et ne sont pas transmises à des tiers.
-        </p>
-      </div>
-
     </div>
   </section>
 
@@ -948,7 +693,7 @@
   <div class="container">
     <div class="footer-inner">
       <div>© EB Avocat – Maître Eloïse Behra, Avocate à Liévin.</div>
-      <div><a href="#mentions-legales">Mentions légales</a></div>
+      <div><a href="index.html#mentions-legales">Mentions légales</a></div>
     </div>
   </div>
 </footer>
@@ -968,22 +713,6 @@
       });
     });
   }
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target) {
-          const headerOffset = 70;
-          const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-          const offsetPosition = elementPosition - headerOffset;
-          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-        }
-      }
-    });
-  });
 </script>
 
 </body>
