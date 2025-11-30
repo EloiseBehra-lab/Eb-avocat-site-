@@ -89,21 +89,28 @@
        radial-gradient(circle at bottom right,rgba(33,42,78,0.95) 0,#05060b 52%);
       color:var(--white);
     }
+
+    /* Si tu as ton logo en PNG, mets-le dans le même dossier
+       et remplace 'logo-eb-avocat.png' ci-dessous par son nom exact */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-80px;
+      background:
+        radial-gradient(circle at top left,rgba(200,165,107,0.12) 0,transparent 55%),
+        url("logo-eb-avocat.png") center/420px no-repeat;
+      opacity:0.10;
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+
     .hero-inner{
       position:relative;display:grid;gap:2.6rem;align-items:center;z-index:1;
     }
-    /* Logo EB en fond (placer eb-logo-gold.png dans le même dossier que index.html) */
-    .hero-logo-bg-img{
+    .hero-logo-bg{
       position:absolute;right:-40px;top:-40px;width:320px;height:320px;
       opacity:0.18;pointer-events:none;
-      background:url('eb-logo-gold.png') center/contain no-repeat;
     }
-    @media(min-width:900px){
-      .hero-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);}
-      .hero h1{font-size:2.5rem;}
-      .hero-logo-bg-img{right:-20px;top:-20px;width:360px;height:360px;}
-    }
-
     .hero-tag{
       display:inline-flex;align-items:center;gap:0.5rem;
       padding:0.25rem 0.9rem;border-radius:999px;
@@ -165,8 +172,13 @@
     }
     .hero-panel-value{color:#f4f4ff;font-weight:500;}
     .hero-panel-note{font-size:0.78rem;color:#aeb0d0;margin-top:1rem;}
+    @media(min-width:900px){
+      .hero-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);}
+      .hero h1{font-size:2.5rem;}
+      .hero-logo-bg{right:-20px;top:-20px;width:360px;height:360px;}
+    }
 
-    /* SECTIONS */
+    /* SECTIONS GÉNÉRALES */
     .section-header{margin-bottom:2.3rem;}
     .section-kicker{
       font-size:0.78rem;text-transform:uppercase;letter-spacing:0.18em;
@@ -217,6 +229,75 @@
     }
     .domain-note{font-size:0.83rem;color:var(--muted);margin-top:0.7rem;}
 
+    /* AVIS GOOGLE */
+    .reviews{background:#ffffff;}
+    .reviews-grid{
+      display:grid;
+      gap:1.4rem;
+    }
+    @media(min-width:900px){
+      .reviews-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+      }
+    }
+    .review-card{
+      background:#f9fafc;
+      border-radius:var(--radius);
+      padding:1.3rem 1.4rem;
+      border:1px solid #e1e3f0;
+      box-shadow:0 8px 24px rgba(0,0,0,0.03);
+      display:flex;
+      flex-direction:column;
+      gap:0.45rem;
+      height:100%;
+    }
+    .review-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.5rem;
+    }
+    .review-name{
+      font-weight:600;
+      font-size:0.94rem;
+      color:var(--blue-dark);
+    }
+    .review-stars{
+      color:#f4b400;
+      font-size:0.9rem;
+      letter-spacing:0.05em;
+    }
+    .review-text{
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+    .review-date{
+      font-size:0.78rem;
+      color:#8a8ca0;
+      margin-top:auto;
+    }
+    .reviews-footer{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:center;
+      gap:0.75rem;
+      margin-top:1.6rem;
+      font-size:0.85rem;
+      color:var(--muted);
+    }
+    .reviews-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:0.35rem;
+      padding:0.35rem 0.7rem;
+      border-radius:999px;
+      background:#fff7e0;
+      border:1px solid #f3d38b;
+      font-size:0.8rem;
+      color:#9a6a06;
+    }
+
     /* RDV */
     .rdv{background:linear-gradient(135deg,#11172b,#1f2940);color:var(--white);}
     .rdv .section-title{color:#ffffff;}
@@ -238,84 +319,6 @@
       content:"•";position:absolute;left:0.25rem;color:var(--gold-soft);
     }
 
-    <!-- AVIS CLIENTS -->
-<section id="avis" class="reviews-section" style="background:#ffffff;padding:4.5rem 0;">
-  <div class="container">
-    
-    <div class="section-header">
-      <div class="section-kicker">Avis clients</div>
-      <h2 class="section-title">Ils ont fait confiance au cabinet</h2>
-      <p class="section-subtitle">
-        Découvrez les témoignages de clients accompagnés par Maître Behra. 
-        Pour laisser votre avis, cliquez sur le bouton ci-dessous.
-      </p>
-    </div>
-
-    <div class="reviews-grid" style="
-      display:grid;
-      gap:1.8rem;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    ">
-
-      <!-- AVIS 1 -->
-      <div class="review-card" style="
-        background:#fafbff;
-        border:1px solid #e4e6f0;
-        border-radius:14px;
-        padding:1.6rem 1.8rem;
-        box-shadow:0 8px 20px rgba(0,0,0,0.06);
-      ">
-        <div style="color:#c8a56b;font-size:1.2rem;margin-bottom:0.4rem;">★★★★★</div>
-        <p style="font-size:0.95rem;color:#333;">
-          « Maître Behra m’a aidée avec beaucoup d’écoute et de professionnalisme. 
-          Je recommande vivement son cabinet. »
-        </p>
-        <div style="margin-top:0.8rem;color:#6b6c75;font-size:0.85rem;">— Sophie D.</div>
-      </div>
-
-      <!-- AVIS 2 -->
-      <div class="review-card" style="
-        background:#fafbff;
-        border:1px solid #e4e6f0;
-        border-radius:14px;
-        padding:1.6rem 1.8rem;
-        box-shadow:0 8px 20px rgba(0,0,0,0.06);
-      ">
-        <div style="color:#c8a56b;font-size:1.2rem;margin-bottom:0.4rem;">★★★★★</div>
-        <p style="font-size:0.95rem;color:#333;">
-          « Excellent suivi de mon dossier pénal. Avocate réactive, humaine et très professionnelle. »
-        </p>
-        <div style="margin-top:0.8rem;color:#6b6c75;font-size:0.85rem;">— Mehdi B.</div>
-      </div>
-
-      <!-- AVIS 3 -->
-      <div class="review-card" style="
-        background:#fafbff;
-        border:1px solid #e4e6f0;
-        border-radius:14px;
-        padding:1.6rem 1.8rem;
-        box-shadow:0 8px 20px rgba(0,0,0,0.06);
-      ">
-        <div style="color:#c8a56b;font-size:1.2rem;margin-bottom:0.4rem;">★★★★★</div>
-        <p style="font-size:0.95rem;color:#333;">
-          « Très bonne avocate, à l’écoute. Les explications sont claires et on se sent en confiance. »
-        </p>
-        <div style="margin-top:0.8rem;color:#6b6c75;font-size:0.85rem;">— L. Martin</div>
-      </div>
-
-    </div>
-
-    <div style="text-align:center;margin-top:2rem;">
-      <a href="https://g.page/r/CTAHLu0pm-laEBE/review" 
-         class="btn btn-primary"
-         style="font-size:0.95rem;padding:0.7rem 1.4rem;display:inline-block;">
-        Laisser un avis sur Google
-      </a>
-    </div>
-
-  </div>
-</section>
-    
     /* CONTACT */
     .contact-grid{display:grid;gap:1.7rem;}
     @media(min-width:900px){
@@ -380,6 +383,7 @@
         <a href="#accueil">Accueil</a>
         <a href="#presentation">Présentation</a>
         <a href="#domaines">Domaines</a>
+        <a href="#avis">Avis</a>
         <a href="#rdv">Rendez-vous</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
@@ -392,6 +396,7 @@
       <a href="#accueil">Accueil</a>
       <a href="#presentation">Présentation</a>
       <a href="#domaines">Domaines</a>
+      <a href="#avis">Avis</a>
       <a href="#rdv">Rendez-vous</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -402,10 +407,30 @@
 
   <!-- HERO -->
   <section id="accueil" class="hero">
-    <div class="hero-logo-bg-img"></div>
-
     <div class="container">
       <div class="hero-inner">
+        <!-- Logo justice en fond supplémentaire -->
+        <svg class="hero-logo-bg" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <linearGradient id="justiceGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f3e3b8"/>
+              <stop offset="40%" stop-color="#d3b978"/>
+              <stop offset="100%" stop-color="#9e7c3e"/>
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#justiceGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="100" y1="30" x2="100" y2="150"/>
+            <line x1="70" y1="50" x2="130" y2="50"/>
+            <path d="M70 50 L55 95 A20 12 0 0 0 85 95 Z"/>
+            <path d="M130 50 L115 95 A20 12 0 0 0 145 95 Z"/>
+            <circle cx="70" cy="50" r="3"/>
+            <circle cx="130" cy="50" r="3"/>
+            <circle cx="100" cy="30" r="4"/>
+            <path d="M80 150 H120"/>
+            <path d="M70 160 H130"/>
+          </g>
+        </svg>
+
         <div>
           <div class="hero-tag">
             <span class="hero-tag-dot"></span>
@@ -420,7 +445,7 @@
             ou à une situation familiale sensible, avec rigueur, clarté et écoute.
           </p>
           <div class="hero-actions">
-            <a href="https://calendly.com/eloisebehra-avocat/30min" class="btn btn-primary" target="_blank" rel="noopener">
+            <a href="https://calendly.com/eloisebehra-avocat/30min" target="_blank" rel="noopener" class="btn btn-primary">
               Prendre rendez-vous en ligne
             </a>
             <a href="tel:0634533246" class="btn btn-outline">Appeler le cabinet</a>
@@ -428,7 +453,7 @@
           <div class="hero-meta">
             <div>
               <strong>Droit pénal</strong>
-              Garde à vue, tribunal correctionnel, prévenus, victimes, aménagement de peine…
+              Garde à vue, tribunal correctionnel, victimes & prévenus, aménagement de peine…
             </div>
             <div>
               <strong>Droit de la famille</strong>
@@ -458,8 +483,7 @@
             </div>
           </div>
           <p class="hero-panel-note">
-            Réservez directement un créneau en ligne grâce à l’agenda du cabinet, ou contactez Maître Behra
-            par téléphone ou e-mail pour toute situation urgente.
+            Réservez directement votre créneau en ligne ou contactez le cabinet pour un rendez-vous au cabinet, par téléphone ou en visioconférence.
           </p>
         </aside>
       </div>
@@ -532,22 +556,21 @@
       <div class="domain-grid">
         <article class="domain-card">
           <div class="domain-tag">Droit pénal</div>
-          <h3>Défense pénale, prévenus & assistance des victimes</h3>
+          <h3>Défense pénale & assistance des victimes et prévenus</h3>
           <p>
             Que vous soyez mis en cause ou victime, vous êtes accompagné(e) à chaque étape de la procédure.
           </p>
           <ul>
-            <li>Garde à vue et audition libre (conseils et assistance)</li>
-            <li>Enquête préliminaire et information judiciaire</li>
-            <li>Mise en examen, contrôle judiciaire, convocation par officier de police judiciaire</li>
-            <li>Prévenus devant le tribunal correctionnel ou cour d’assises</li>
+            <li>Garde à vue, audition libre</li>
+            <li>Enquête préliminaire, information judiciaire</li>
+            <li>Convocation devant le tribunal correctionnel</li>
             <li>Procédure de comparution sur reconnaissance préalable de culpabilité (CRPC)</li>
-            <li>Assistance des victimes : dépôt de plainte, constitution de partie civile, audience</li>
-            <li>Exécution des peines et aménagement (bracelet électronique, semi-liberté, libération conditionnelle…)</li>
+            <li>Assistance des victimes et des prévenus, demande de réparation du préjudice</li>
+            <li>Exécution et aménagement de peine</li>
           </ul>
           <p class="domain-note">
             En matière pénale, les délais sont souvent très courts : il est recommandé de consulter dès
-            que possible afin d’anticiper la stratégie de défense.
+            que possible.
           </p>
         </article>
 
@@ -559,10 +582,10 @@
           </p>
           <ul>
             <li>Divorce amiable (par consentement mutuel) ou contentieux</li>
-            <li>Séparation hors mariage et rupture de PACS</li>
+            <li>Séparation hors mariage, rupture de PACS</li>
             <li>Résidence des enfants, droit de visite et d’hébergement</li>
-            <li>Pensions alimentaires (fixation, révision, recouvrement)</li>
-            <li>Violences intrafamiliales et mesures de protection</li>
+            <li>Pensions alimentaires</li>
+            <li>Violences intrafamiliales</li>
             <li>Partage et liquidation du patrimoine</li>
           </ul>
           <p class="domain-note">
@@ -570,6 +593,67 @@
             l’équilibre des enfants et de la famille.
           </p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS GOOGLE -->
+  <section id="avis" class="reviews">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-kicker">Avis clients</div>
+        <h2 class="section-title">Ils ont fait confiance au cabinet</h2>
+        <p class="section-subtitle">
+          Les avis Google reflètent l’expérience de clients accompagnés par le cabinet EB Avocat
+          en droit pénal et en droit de la famille.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-name">C. D.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">
+            Maître Behra a pris le temps d’expliquer clairement la procédure et de répondre à toutes
+            mes questions. Je me suis sentie accompagnée du début à la fin.
+          </p>
+          <div class="review-date">Avis Google</div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-name">M. L.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">
+            Très professionnelle et réactive, intervention efficace devant le tribunal correctionnel.
+            Je recommande vivement le cabinet.
+          </p>
+          <div class="review-date">Avis Google</div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-name">A. P.</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">
+            Dans un contexte familial difficile, j’ai apprécié l’écoute, la disponibilité
+            et la clarté des explications de Maître Behra.
+          </p>
+          <div class="review-date">Avis Google</div>
+        </article>
+      </div>
+
+      <div class="reviews-footer">
+        <div class="reviews-badge">
+          ★  Avis Google – EB Avocat
+        </div>
+        <a href="https://g.page/r/CTAHLu0pm-laEBE/review" target="_blank" rel="noopener" class="btn btn-primary">
+          Consulter ou laisser un avis sur Google
+        </a>
       </div>
     </div>
   </section>
@@ -589,38 +673,40 @@
       <div class="rdv-inner">
         <div>
           <p>
-            Vous pouvez désormais réserver directement un créneau en ligne via l’agenda du cabinet.
-            Le rendez-vous est confirmé par e-mail, avec toutes les informations pratiques nécessaires.
+            Vous pouvez réserver un créneau directement en ligne via l’outil de prise de rendez-vous,
+            ou contacter le cabinet par téléphone ou e-mail.
           </p>
           <p style="margin-top:0.7rem;">
-            En complément, il est toujours possible de prendre contact :
+            Pour organiser un rendez-vous :
           </p>
           <ul class="rdv-list">
-            <li>par téléphone, pour convenir d’un horaire adapté ;</li>
-            <li>par e-mail, en décrivant brièvement votre situation ;</li>
-            <li>via le formulaire de contact ci-dessous.</li>
+            <li>réservez un créneau en ligne ;</li>
+            <li>ou appelez le cabinet pour convenir d’un horaire ;</li>
+            <li>ou envoyez un e-mail / utilisez le formulaire de contact.</li>
           </ul>
-          <div style="margin-top:1.4rem;">
-            <a href="https://calendly.com/eloisebehra-avocat/30min" class="btn btn-primary" target="_blank" rel="noopener">
+          <div style="margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:0.8rem;">
+            <a href="https://calendly.com/eloisebehra-avocat/30min" target="_blank" rel="noopener" class="btn btn-primary">
               Réserver un créneau en ligne
             </a>
+            <a href="#contact" class="btn btn-outline">Écrire au cabinet</a>
           </div>
         </div>
 
         <div class="rdv-card">
-          <h3 style="margin-bottom:0.8rem;">Prise de rendez-vous en ligne sécurisée</h3>
+          <h3 style="margin-bottom:0.8rem;">Rendez-vous en ligne – Calendly</h3>
           <p style="font-size:0.9rem;color:#d4d6f0;">
-            Le système de réservation en ligne vous permet de choisir facilement le type de rendez-vous
-            (cabinet, téléphone ou visio) ainsi que le créneau qui vous convient.
+            En cliquant sur le bouton ci-dessous, vous accédez à l’agenda en ligne du cabinet.
+            Vous pouvez choisir un créneau disponible et indiquer le mode de rendez-vous souhaité
+            (cabinet, téléphone ou visio).
           </p>
           <div style="margin-top:1.2rem;">
-            <a href="https://calendly.com/eloisebehra-avocat/30min" class="btn btn-primary" style="font-size:0.9rem;padding:0.6rem 1.2rem;" target="_blank" rel="noopener">
+            <a href="https://calendly.com/eloisebehra-avocat/30min" target="_blank" rel="noopener"
+               class="btn btn-primary" style="font-size:0.9rem;padding:0.6rem 1.2rem;">
               Accéder à l’agenda en ligne
             </a>
           </div>
           <p style="font-size:0.8rem;color:#b9bce6;margin-top:0.8rem;">
-            En cas d’urgence pénale (garde à vue, convocation proche), il est conseillé de contacter
-            directement le cabinet par téléphone.
+            Vous recevrez une confirmation de rendez-vous ainsi qu’un rappel avant la date prévue.
           </p>
         </div>
       </div>
@@ -727,7 +813,7 @@
           E-mail : <a href="mailto:eloisebehra.avocat@gmail.com">eloisebehra.avocat@gmail.com</a>
         </p>
         <p><strong>Hébergement du site :</strong><br>
-          Site destiné à être hébergé via un service d’hébergement en ligne (par exemple GitHub Pages).
+          Site hébergé via un service d’hébergement en ligne (GitHub Pages).
         </p>
         <p><strong>Données personnelles :</strong><br>
           Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre
