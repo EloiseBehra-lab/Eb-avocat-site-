@@ -6,6 +6,33 @@
   <title>EB Avocat – Maître Eloïse BEHRA, Avocate à Liévin</title>
   <meta name="description" content="Cabinet EB Avocat – Maître Eloïse Behra, avocate en droit pénal et en droit de la famille à Liévin (62), Barreau de Béthune.">
 
+  <!-- Données structurées LocalBusiness / LegalService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "EB Avocat - Maître Eloïse Behra",
+    "legalName": "EB Avocat",
+    "telephone": "+33-6-34-53-32-46",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "28 rue Antoine Dilly",
+      "postalCode": "62800",
+      "addressLocality": "Liévin",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 50.4424,
+      "longitude": 2.7808
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Liévin"
+    }
+  }
+  </script>
+
   <style>
     :root {
       --blue-dark:#0d1020;
@@ -232,6 +259,79 @@
       .contact-grid{grid-template-columns:minmax(0,2.3fr) minmax(0,3fr);}
     }
 
+    /* LOCALISEZ-MOI / CARTE */
+    .map-section{
+      background:#ffffff;
+    }
+    .map-grid{
+      display:grid;
+      gap:1.8rem;
+    }
+    @media(min-width:900px){
+      .map-grid{
+        grid-template-columns:minmax(0,2.3fr) minmax(0,3fr);
+      }
+    }
+    .map-info.card{
+      position:relative;
+    }
+    .map-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:0.4rem;
+      font-size:0.8rem;
+      text-transform:uppercase;
+      letter-spacing:0.16em;
+      color:var(--muted);
+      margin-bottom:0.6rem;
+    }
+    .map-badge-dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--gold);
+      box-shadow:0 0 0 4px rgba(200,165,107,0.25);
+    }
+    .map-card{
+      border-radius:20px;
+      padding:0.25rem;
+      background:radial-gradient(circle at top left,rgba(231,215,179,0.4) 0,rgba(11,14,30,1) 55%,#05060b 100%);
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    .map-embed{
+      border-radius:16px;
+      overflow:hidden;
+      background:#000;
+      min-height:260px;
+    }
+    .map-embed iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+    .map-links{
+      margin-top:1rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.8rem;
+    }
+    .btn-ghost{
+      border-radius:999px;
+      border:1px solid #d5d6e3;
+      padding:0.55rem 1.15rem;
+      font-size:0.88rem;
+      background:#f7f7fc;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:0.4rem;
+    }
+    .btn-ghost:hover{
+      background:#ececf7;
+    }
+
     /* FOOTER + LEGAL */
     footer{
       border-top:1px solid #dee0eb;padding:1.6rem 0;
@@ -268,6 +368,7 @@
         <a href="#domaines">Domaines</a>
         <a href="#avis">Avis</a>
         <a href="#rdv">Rendez-vous</a>
+        <a href="#localisez-moi">Localisez-moi</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
 
@@ -282,6 +383,7 @@
       <a href="#domaines">Domaines</a>
       <a href="#avis">Avis</a>
       <a href="#rdv">Rendez-vous</a>
+      <a href="#localisez-moi">Localisez-moi</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -690,6 +792,12 @@
             <span class="contact-label">Horaires</span><br>
             <span class="contact-value">Sur rendez-vous, du lundi au vendredi</span>
           </p>
+
+          <p>
+            <a href="#localisez-moi" style="font-size:0.9rem;color:#1f2940;text-decoration:underline;">
+              Voir la carte et l’itinéraire
+            </a>
+          </p>
         </div>
 
         <div class="card">
@@ -734,6 +842,70 @@
             </button>
           </form>
 
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCALISEZ-MOI -->
+  <section id="localisez-moi" class="map-section">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-kicker">Localisez-moi</div>
+        <h2 class="section-title">Venir au cabinet EB Avocat</h2>
+        <p class="section-subtitle">
+          Retrouvez la localisation précise du cabinet de Maître Eloïse Behra à Liévin et accédez en un clic
+          à l’itinéraire via Google Maps. Cette section «&nbsp;Localisez-moi&nbsp;» est pensée pour vous guider
+          facilement jusqu’au cabinet.
+        </p>
+      </div>
+
+      <div class="map-grid">
+
+        <div class="card map-info">
+          <div class="map-badge">
+            <span class="map-badge-dot"></span>
+            Référencement local – Liévin (62800)
+          </div>
+
+          <h3 style="margin-bottom:0.6rem;">Coordonnées géographiques du cabinet</h3>
+          <p style="font-size:0.95rem;margin-bottom:0.8rem;">
+            <strong>EB Avocat – Maître Eloïse Behra</strong><br>
+            28 rue Antoine Dilly<br>
+            62800 Liévin – France
+          </p>
+
+          <p style="font-size:0.9rem;color:#55566a;margin-bottom:0.8rem;">
+            Le cabinet se situe à Liévin, à proximité immédiate de Lens, dans le Pas-de-Calais.
+            Les coordonnées ci-dessous permettent un repérage précis pour tout GPS ou service de cartographie.
+          </p>
+
+          <ul style="margin-top:0.4rem;font-size:0.92rem;padding-left:1.2rem;">
+            <li><strong>Latitude :</strong> 50.4424</li>
+            <li><strong>Longitude :</strong> 2.7808</li>
+          </ul>
+
+          <div class="map-links">
+            <a class="btn-ghost" href="https://maps.app.goo.gl/UKZHi6WKiahwM3yy5?g_st=com.openai.chat.ShareExtension" target="_blank" rel="noopener noreferrer">
+              Ouvrir dans Google Maps
+            </a>
+            <a class="btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=50.4424,2.7808" target="_blank" rel="noopener noreferrer">
+              Itinéraire jusqu’au cabinet
+            </a>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <div class="map-embed">
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              src="https://www.google.com/maps?q=50.4424,2.7808&hl=fr&z=17&output=embed">
+            </iframe>
+          </div>
         </div>
 
       </div>
