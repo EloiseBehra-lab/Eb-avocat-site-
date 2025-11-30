@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EB Avocat – Me Eloïse Behra, Avocate à Liévin</title>
-  <meta name="description" content="Cabinet EB Avocat – Me Eloïse Behra, avocate en droit pénal et en droit de la famille à Liévin (62), Barreau de Béthune.">
+  <title>EB Avocat – Maître Eloïse Behra, Avocate à Liévin</title>
+  <meta name="description" content="Cabinet EB Avocat – Maître Eloïse Behra, avocate en droit pénal et en droit de la famille à Liévin (62), Barreau de Béthune.">
   <style>
     :root {
       --blue-dark:#0d1020;
@@ -92,10 +92,18 @@
     .hero-inner{
       position:relative;display:grid;gap:2.6rem;align-items:center;z-index:1;
     }
-    .hero-logo-bg{
+    /* Logo EB en fond (placer eb-logo-gold.png dans le même dossier que index.html) */
+    .hero-logo-bg-img{
       position:absolute;right:-40px;top:-40px;width:320px;height:320px;
       opacity:0.18;pointer-events:none;
+      background:url('eb-logo-gold.png') center/contain no-repeat;
     }
+    @media(min-width:900px){
+      .hero-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);}
+      .hero h1{font-size:2.5rem;}
+      .hero-logo-bg-img{right:-20px;top:-20px;width:360px;height:360px;}
+    }
+
     .hero-tag{
       display:inline-flex;align-items:center;gap:0.5rem;
       padding:0.25rem 0.9rem;border-radius:999px;
@@ -157,11 +165,6 @@
     }
     .hero-panel-value{color:#f4f4ff;font-weight:500;}
     .hero-panel-note{font-size:0.78rem;color:#aeb0d0;margin-top:1rem;}
-    @media(min-width:900px){
-      .hero-inner{grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);}
-      .hero h1{font-size:2.5rem;}
-      .hero-logo-bg{right:-20px;top:-20px;width:360px;height:360px;}
-    }
 
     /* SECTIONS */
     .section-header{margin-bottom:2.3rem;}
@@ -291,7 +294,7 @@
         <div class="logo-mark">EB</div>
         <div>
           <div class="logo-text-main">EB AVOCAT</div>
-          <div class="logo-text-sub">Me Eloïse Behra – Liévin</div>
+          <div class="logo-text-sub">Maître Eloïse Behra – Liévin</div>
         </div>
       </div>
 
@@ -321,37 +324,17 @@
 
   <!-- HERO -->
   <section id="accueil" class="hero">
+    <div class="hero-logo-bg-img"></div>
+
     <div class="container">
       <div class="hero-inner">
-        <!-- Logo justice en fond -->
-        <svg class="hero-logo-bg" viewBox="0 0 200 200" aria-hidden="true">
-          <defs>
-            <linearGradient id="justiceGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#f3e3b8"/>
-              <stop offset="40%" stop-color="#d3b978"/>
-              <stop offset="100%" stop-color="#9e7c3e"/>
-            </linearGradient>
-          </defs>
-          <g fill="none" stroke="url(#justiceGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="100" y1="30" x2="100" y2="150"/>
-            <line x1="70" y1="50" x2="130" y2="50"/>
-            <path d="M70 50 L55 95 A20 12 0 0 0 85 95 Z"/>
-            <path d="M130 50 L115 95 A20 12 0 0 0 145 95 Z"/>
-            <circle cx="70" cy="50" r="3"/>
-            <circle cx="130" cy="50" r="3"/>
-            <circle cx="100" cy="30" r="4"/>
-            <path d="M80 150 H120"/>
-            <path d="M70 160 H130"/>
-          </g>
-        </svg>
-
         <div>
           <div class="hero-tag">
             <span class="hero-tag-dot"></span>
             Avocate en droit pénal & droit de la famille – Liévin (62)
           </div>
           <h1>
-            Me Eloïse Behra
+            Maître Eloïse Behra
             <span>Une défense engagée et humaine à vos côtés.</span>
           </h1>
           <p class="hero-lead">
@@ -359,13 +342,15 @@
             ou à une situation familiale sensible, avec rigueur, clarté et écoute.
           </p>
           <div class="hero-actions">
-            <a href="#rdv" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="https://calendly.com/eloisebehra-avocat/30min" class="btn btn-primary" target="_blank" rel="noopener">
+              Prendre rendez-vous en ligne
+            </a>
             <a href="tel:0634533246" class="btn btn-outline">Appeler le cabinet</a>
           </div>
           <div class="hero-meta">
             <div>
               <strong>Droit pénal</strong>
-              Garde à vue, tribunal correctionnel, victimes, aménagement de peine…
+              Garde à vue, enquête, prévenus, victimes, aménagement de peine…
             </div>
             <div>
               <strong>Droit de la famille</strong>
@@ -395,8 +380,8 @@
             </div>
           </div>
           <p class="hero-panel-note">
-            Un outil de prise de rendez-vous en ligne pourra être ajouté pour réserver directement un créneau
-            dans l’agenda du cabinet.
+            Réservez directement un créneau en ligne grâce à l’agenda du cabinet, ou contactez Maître Behra
+            par téléphone ou e-mail pour toute situation urgente.
           </p>
         </aside>
       </div>
@@ -417,7 +402,7 @@
 
       <div class="grid-2">
         <div class="card">
-          <h3>Me Eloïse Behra</h3>
+          <h3>Maître Eloïse Behra</h3>
           <p>
             Avocate en <strong>droit pénal</strong> et en <strong>droit de la famille</strong>, j’accompagne
             les justiciables à Liévin et dans l’ensemble du Pas-de-Calais.
@@ -469,21 +454,22 @@
       <div class="domain-grid">
         <article class="domain-card">
           <div class="domain-tag">Droit pénal</div>
-          <h3>Défense pénale & assistance des victimes</h3>
+          <h3>Défense pénale, prévenus & assistance des victimes</h3>
           <p>
             Que vous soyez mis en cause ou victime, vous êtes accompagné(e) à chaque étape de la procédure.
           </p>
           <ul>
-            <li>Garde à vue, audition libre</li>
-            <li>Enquête préliminaire, information judiciaire</li>
-            <li>Convocation devant le tribunal correctionnel</li>
+            <li>Garde à vue et audition libre (conseils et assistance)</li>
+            <li>Enquête préliminaire et information judiciaire</li>
+            <li>Mise en examen, contrôle judiciaire, convocation par officier de police judiciaire</li>
+            <li>Prévenus devant le tribunal de police, tribunal correctionnel ou cour d’assises</li>
             <li>Procédure de comparution sur reconnaissance préalable de culpabilité (CRPC)</li>
-            <li>Assistance des victimes et demande de réparation du préjudice</li>
-            <li>Exécution et aménagement de peine</li>
+            <li>Assistance des victimes : dépôt de plainte, constitution de partie civile, audience</li>
+            <li>Exécution des peines et aménagement (bracelet électronique, semi-liberté, libération conditionnelle…)</li>
           </ul>
           <p class="domain-note">
             En matière pénale, les délais sont souvent très courts : il est recommandé de consulter dès
-            que possible.
+            que possible afin d’anticiper la stratégie de défense.
           </p>
         </article>
 
@@ -495,10 +481,10 @@
           </p>
           <ul>
             <li>Divorce amiable (par consentement mutuel) ou contentieux</li>
-            <li>Séparation hors mariage, rupture de PACS</li>
+            <li>Séparation hors mariage et rupture de PACS</li>
             <li>Résidence des enfants, droit de visite et d’hébergement</li>
-            <li>Pensions alimentaires</li>
-            <li>Violences intrafamiliales</li>
+            <li>Pensions alimentaires (fixation, révision, recouvrement)</li>
+            <li>Violences intrafamiliales et mesures de protection</li>
             <li>Partage et liquidation du patrimoine</li>
           </ul>
           <p class="domain-note">
@@ -525,35 +511,38 @@
       <div class="rdv-inner">
         <div>
           <p>
-            Un outil de prise de rendez-vous en ligne (Calendly, par exemple) pourra être intégré pour
-            réserver un créneau directement dans l’agenda du cabinet.
+            Vous pouvez désormais réserver directement un créneau en ligne via l’agenda du cabinet.
+            Le rendez-vous est confirmé par e-mail, avec toutes les informations pratiques nécessaires.
           </p>
           <p style="margin-top:0.7rem;">
-            En attendant, vous pouvez prendre contact :
+            En complément, il est toujours possible de prendre contact :
           </p>
           <ul class="rdv-list">
-            <li>par téléphone, pour convenir d’un horaire ;</li>
+            <li>par téléphone, pour convenir d’un horaire adapté ;</li>
             <li>par e-mail, en décrivant brièvement votre situation ;</li>
             <li>via le formulaire de contact ci-dessous.</li>
           </ul>
           <div style="margin-top:1.4rem;">
-            <a href="#contact" class="btn btn-primary">Contacter le cabinet</a>
+            <a href="https://calendly.com/eloisebehra-avocat/30min" class="btn btn-primary" target="_blank" rel="noopener">
+              Réserver un créneau en ligne
+            </a>
           </div>
         </div>
 
         <div class="rdv-card">
-          <h3 style="margin-bottom:0.8rem;">Bouton de prise de rendez-vous en ligne</h3>
+          <h3 style="margin-bottom:0.8rem;">Prise de rendez-vous en ligne sécurisée</h3>
           <p style="font-size:0.9rem;color:#d4d6f0;">
-            Dès que votre compte sur un service de prise de rendez-vous sera créé, ce bouton pourra
-            renvoyer vers votre page de réservation :
+            Le système de réservation en ligne vous permet de choisir facilement le type de rendez-vous
+            (cabinet, téléphone ou visio) ainsi que le créneau qui vous convient.
           </p>
           <div style="margin-top:1.2rem;">
-            <a href="#" class="btn btn-primary" style="font-size:0.9rem;padding:0.6rem 1.2rem;pointer-events:none;opacity:0.7;">
-              Réserver un créneau en ligne
+            <a href="https://calendly.com/eloisebehra-avocat/30min" class="btn btn-primary" style="font-size:0.9rem;padding:0.6rem 1.2rem;" target="_blank" rel="noopener">
+              Accéder à l’agenda en ligne
             </a>
           </div>
           <p style="font-size:0.8rem;color:#b9bce6;margin-top:0.8rem;">
-            (Le lien sera activé dès que votre page de réservation sera disponible.)
+            En cas d’urgence pénale (garde à vue, convocation proche), il est conseillé de contacter
+            directement le cabinet par téléphone.
           </p>
         </div>
       </div>
@@ -577,7 +566,7 @@
           <h3 style="margin-bottom:0.9rem;">Coordonnées du cabinet</h3>
           <p>
             <span class="contact-label">Cabinet</span><br>
-            <span class="contact-value">EB Avocat – Me Eloïse Behra</span>
+            <span class="contact-value">EB Avocat – Maître Eloïse Behra</span>
           </p>
           <p>
             <span class="contact-label">Adresse</span><br>
@@ -589,7 +578,7 @@
           </p>
           <p>
             <span class="contact-label">E-mail</span><br>
-            <span class="contact-value"><a href="mailto:Eloisebehra.avocat@gmail.com">Eloisebehra.avocat@gmail.com</a></span>
+            <span class="contact-value"><a href="mailto:eloisebehra.avocat@gmail.com">eloisebehra.avocat@gmail.com</a></span>
           </p>
           <p>
             <span class="contact-label">Horaires</span><br>
@@ -602,7 +591,7 @@
           <p style="font-size:0.88rem;margin-bottom:0.6rem;">
             Ce formulaire ouvre votre logiciel de messagerie pour envoyer un e-mail au cabinet.
           </p>
-          <form action="mailto:Eloisebehra.avocat@gmail.com" method="post" enctype="text/plain">
+          <form action="mailto:eloisebehra.avocat@gmail.com" method="post" enctype="text/plain">
             <div class="form-row">
               <div>
                 <label for="nom">Nom et prénom *</label>
@@ -647,17 +636,17 @@
       </div>
       <div class="legal-text">
         <p><strong>Éditeur du site :</strong><br>
-          EB Avocat – Me Eloïse Behra<br>
+          EB Avocat – Maître Eloïse Behra<br>
           Avocate au Barreau de Béthune<br>
           28 rue Antoine Dilly, 62800 Liévin<br>
           SIRET : 879 342 400 00030
         </p>
         <p><strong>Responsable de la publication :</strong><br>
-          Me Eloïse Behra
+          Maître Eloïse Behra
         </p>
         <p><strong>Contact :</strong><br>
           Téléphone : 06 34 53 32 46<br>
-          E-mail : <a href="mailto:Eloisebehra.avocat@gmail.com">Eloisebehra.avocat@gmail.com</a>
+          E-mail : <a href="mailto:eloisebehra.avocat@gmail.com">eloisebehra.avocat@gmail.com</a>
         </p>
         <p><strong>Hébergement du site :</strong><br>
           Site destiné à être hébergé via un service d’hébergement en ligne (par exemple GitHub Pages).
@@ -676,7 +665,7 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div>© EB Avocat – Me Eloïse Behra, Avocate à Liévin.</div>
+      <div>© EB Avocat – Maître Eloïse Behra, Avocate à Liévin.</div>
       <div><a href="#mentions-legales">Mentions légales</a></div>
     </div>
   </div>
