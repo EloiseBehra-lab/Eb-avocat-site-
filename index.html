@@ -8,13 +8,14 @@
   <title>Avocat Liévin – Droit pénal, famille & mineurs – Maître Éloïse Behra</title>
 
   <!-- Meta description optimisée -->
-  <meta name="description" content="Maître Éloïse Behra, avocate à Liévin (62), intervient en droit pénal, droit de la famille et droit des mineurs. Rendez-vous au cabinet, par téléphone ou en visioconférence.">
+  <meta name="description" content="Maître Éloïse Behra, avocate à Liévin (62), intervient en droit pénal, droit de la famille et droit des mineurs, devant les juridictions de Béthune, Lens, Arras et la cour d’appel de Douai. Rendez-vous au cabinet, par téléphone ou en visioconférence.">
 
   <!-- Données structurées LegalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
+    "@id": "https://www.behra-avocat.fr/#cabinet",
     "name": "EB Avocat – Maître Éloïse Behra",
     "legalName": "EB Avocat",
     "url": "https://www.behra-avocat.fr/",
@@ -54,6 +55,7 @@
       "Hulluch",
       "Benifontaine",
       "Bassin lensois",
+      "Douai",
       "Pas-de-Calais"
     ],
     "servesLocation": [
@@ -77,11 +79,68 @@
       "Pont-à-Vendin",
       "Hulluch",
       "Benifontaine",
-      "Bassin lensois"
+      "Bassin lensois",
+      "Douai"
     ],
     "priceRange": "€€",
-    "description": "Avocate à Liévin (62) en droit pénal, droit de la famille et droit des mineurs. Rendez-vous au cabinet, par téléphone ou en visioconférence.",
-    "openingHours": "Mo-Fr 09:00-18:00"
+    "description": "Avocate à Liévin (62) en droit pénal, droit de la famille et droit des mineurs, intervenant notamment devant la cour d’appel de Douai. Rendez-vous au cabinet, par téléphone ou en visioconférence.",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/eb_avocat62"
+    ]
+  }
+  </script>
+
+  <!-- Données structurées FAQPage (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quels documents apporter lors du premier rendez-vous avec votre avocate à Liévin ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Décisions de justice, courriers reçus, convocations, procès-verbaux, éléments médicaux éventuels et principaux échanges (courriels, lettres, messages) en lien avec votre affaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Intervenez-vous en urgence en droit pénal ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, le cabinet peut intervenir en urgence en cas de garde à vue, convocation proche devant le tribunal ou situation impliquant un mineur, afin de vous assister et de défendre vos droits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un rendez-vous peut-il avoir lieu à distance ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, les rendez-vous peuvent être organisés au cabinet à Liévin, par téléphone ou en visioconférence, en fonction de votre situation et de vos disponibilités."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Accompagnez-vous les divorces et séparations dans le bassin lensois ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, le cabinet intervient en droit de la famille pour les habitants de Liévin, Lens et plus largement du bassin lensois, que ce soit pour un divorce amiable ou contentieux, une séparation hors mariage ou l’organisation de la résidence des enfants."
+        }
+      }
+    ]
   }
   </script>
 
@@ -379,7 +438,7 @@
       background:#ececf7;
     }
 
-    /* EXTRA : TIMELINE & FAQ droit des mineurs */
+    /* Timeline & FAQ style réutilisé pour les trois "En pratique" */
     .timeline{
       margin:1.2rem 0 0;
       padding-left:1.2rem;
@@ -469,7 +528,7 @@
     .legal{background:#ffffff;border-top:1px solid #e1e2ec;}
     .legal-text{font-size:0.85rem;color:#55566a;max-width:50rem;}
 
-    /* Form styles (optionnel mais utiles) */
+    /* Form styles */
     form {
       display:flex;
       flex-direction:column;
@@ -602,9 +661,10 @@
           </h1>
 
           <p class="hero-lead">
-            Cabinet EB Avocat – accompagnement des justiciables confrontés à une procédure pénale,
-            à une situation familiale sensible ou à une procédure impliquant un mineur, avec rigueur,
-            clarté et écoute.
+            Cabinet EB Avocat – accompagnement en droit pénal (mis en cause & victimes),
+            en droit de la famille (séparation, divorce, enfants) et en droit des mineurs
+            (assistance éducative, mineurs victimes ou mis en cause), devant les juridictions
+            de Béthune, Arras, Lens et la cour d’appel de Douai.
           </p>
 
           <div class="hero-actions">
@@ -615,7 +675,7 @@
           <div class="hero-meta">
             <div>
               <strong>Droit pénal</strong>
-              Garde à vue, tribunal correctionnel, mis en cause, victimes, aménagement de peine…
+              Garde à vue, tribunal correctionnel, victimes, appel à Douai, aménagement de peine…
             </div>
             <div>
               <strong>Droit de la famille</strong>
@@ -680,7 +740,7 @@
           <p>
             Avocate en <strong>droit pénal</strong>, en <strong>droit de la famille</strong> et en
             <strong>droit des mineurs</strong>, j’accompagne les justiciables à Liévin,
-            à Lens, dans le <strong>bassin lensois</strong> et dans l’ensemble du Pas-de-Calais.
+            à Lens, dans le bassin lensois, et devant la <strong>cour d’appel de Douai</strong>.
           </p>
           <p>
             Mon rôle : vous écouter, analyser votre situation, vous expliquer les différentes options,
@@ -716,14 +776,12 @@
             sur le coût de l’intervention.
           </p>
 
-          <!-- TARIF CONSULTATION -->
           <p>
             Le montant de la première consultation au cabinet est fixé à
             <strong>60&nbsp;€ TTC</strong>. Ce montant n’est pas dû si vous êtes éligible à
             <strong>l’aide juridictionnelle</strong> ou en cas d’ouverture de dossier.
           </p>
 
-          <!-- MOYENS DE PAIEMENT -->
           <p><strong>Moyens de paiement acceptés :</strong></p>
           <ul style="margin-top:0.4rem;font-size:0.92rem;padding-left:1.2rem;">
             <li>Espèces</li>
@@ -753,65 +811,85 @@
         <h2 class="section-title">Domaines de compétence : pénal, famille & mineurs à Liévin</h2>
         <p class="section-subtitle">
           Le cabinet intervient principalement pour les particuliers confrontés à une procédure pénale,
-          à une réorganisation de leur vie familiale ou à une situation impliquant un mineur.
+          à une réorganisation de leur vie familiale ou à une situation impliquant un mineur, à Liévin,
+          Lens, dans le bassin lensois et devant la cour d’appel de Douai.
         </p>
       </div>
 
       <div class="domain-grid">
 
+        <!-- DROIT PENAL -->
         <article class="domain-card">
           <div class="domain-tag">Droit pénal</div>
           <h3>Défense pénale & assistance des victimes</h3>
           <p>
             Le droit pénal impose souvent des délais très courts et des décisions lourdes de conséquences.
-            Que vous soyez mis en cause ou victime, le cabinet vous accompagne à chaque étape pour
-            comprendre la procédure et construire une défense adaptée.
+            Que vous soyez <strong>mis en cause</strong> ou <strong>victime</strong>, le cabinet vous accompagne
+            à chaque étape pour comprendre la procédure et construire une défense ou une demande d’indemnisation adaptée.
           </p>
           <p>
-            L’objectif est de préparer au mieux votre audition ou votre audience, d’anticiper les questions
-            qui pourront vous être posées et de défendre vos intérêts avec rigueur devant les juridictions pénales.
+            En tant qu’<strong>avocat pénal à Liévin</strong>, j’interviens devant les juridictions pénales
+            de Béthune, Arras, Lens et en <strong>appel à la cour d’appel de Douai</strong>.
           </p>
           <ul>
             <li>Garde à vue, audition libre</li>
             <li>Enquête préliminaire, information judiciaire</li>
             <li>Prévenu devant le tribunal correctionnel</li>
-            <li>Convocation par officier de police judiciaire, comparution sur reconnaissance préalable de culpabilité (CRPC)</li>
+            <li>Convocation par officier de police judiciaire, CRPC</li>
             <li>Assistance des victimes, constitution de partie civile</li>
-            <li>Réparation du préjudice et chiffrage des dommages</li>
+            <li>Indemnisation des victimes : CIVI, Fonds de garantie, SARVI</li>
             <li>Exécution et aménagement de peine</li>
+            <li>Appels des décisions devant la cour d’appel de Douai</li>
           </ul>
           <p style="margin-top:0.7rem;font-size:0.9rem;color:#6b6c75;">
-            Le cabinet intervient uniquement en droit pénal général (mis en cause et victimes), et vous aide à
-            prendre des décisions éclairées à chaque étape de la procédure.
+            Pour les victimes, le cabinet vous assiste également dans les démarches auprès de la
+            <strong>CIVI</strong>, du <strongfonds d’aide aux victimes (Fonds de garantie)</strong>
+            et du <strong>SARVI</strong> (Service d’aide au recouvrement des victimes d’infractions),
+            afin de faciliter l’indemnisation de votre préjudice.
           </p>
+          <div style="margin-top:0.9rem;">
+            <a href="#penal-pratique"
+               class="btn"
+               style="padding:0.55rem 1.15rem;font-size:0.85rem;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#151010;box-shadow:var(--shadow-soft);">
+              Le droit pénal en pratique
+            </a>
+          </div>
         </article>
 
+        <!-- DROIT FAMILLE -->
         <article class="domain-card">
           <div class="domain-tag">Droit de la famille</div>
           <h3>Divorce, séparation & protection de la famille</h3>
           <p>
-            Une séparation ou une réorganisation familiale mêle toujours des aspects juridiques et humains.
-            Le cabinet vous accompagne pour protéger vos droits tout en gardant à l’esprit la réalité de votre
-            quotidien et celle de vos enfants.
+            Une séparation, un divorce ou un conflit autour des enfants mêlent des enjeux juridiques et humains.
+            Le cabinet vous accompagne pour protéger vos droits et ceux de vos enfants, avec une attention particulière
+            portée à la compréhension des décisions rendues.
           </p>
           <p>
-            Qu’il s’agisse d’un divorce amiable ou d’une procédure plus conflictuelle, l’enjeu est de trouver
-            la solution la plus adaptée à votre situation : accords négociés, saisine du juge aux affaires familiales,
-            révision de décisions déjà rendues…
+            En tant qu’<strong>avocat en droit de la famille à Liévin et Lens</strong>, j’interviens devant le juge
+            aux affaires familiales et, le cas échéant, en <strong>appel devant la cour d’appel de Douai</strong>.
           </p>
           <ul>
             <li>Divorce amiable (par consentement mutuel) ou contentieux</li>
             <li>Séparation hors mariage, rupture de PACS</li>
             <li>Résidence des enfants, droit de visite et d’hébergement</li>
             <li>Pensions alimentaires (mise en place, révision)</li>
-            <li>Autorité parentale, prises de décision concernant les enfants</li>
+            <li>Autorité parentale, décisions importantes concernant les enfants</li>
             <li>Violences intrafamiliales, ordonnances de protection</li>
             <li>Partage et liquidation du patrimoine</li>
+            <li>Appel des décisions familiales devant la cour d’appel de Douai</li>
           </ul>
           <p style="margin-top:0.7rem;font-size:0.9rem;color:#6b6c75;">
-            Une attention particulière est portée à la situation des enfants et à la lisibilité des décisions
-            pour l’ensemble de la famille.
+            Chaque dossier fait l’objet d’une analyse précise afin de déterminer la solution la plus adaptée,
+            qu’il s’agisse d’une négociation, d’un accord formalisé ou d’une procédure contentieuse.
           </p>
+          <div style="margin-top:0.9rem;">
+            <a href="#famille-pratique"
+               class="btn"
+               style="padding:0.55rem 1.15rem;font-size:0.85rem;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#151010;box-shadow:var(--shadow-soft);">
+              Le droit de la famille en pratique
+            </a>
+          </div>
         </article>
 
         <!-- DROIT DES MINEURS -->
@@ -833,19 +911,145 @@
             <li>Mesures éducatives & suivi après décision</li>
           </ul>
 
-          <!-- Bouton "En savoir plus" -->
           <div style="margin-top:0.8rem;">
             <a href="#mineurs-details"
                class="btn"
                style="padding:0.55rem 1.15rem;font-size:0.85rem;background:linear-gradient(135deg,var(--gold),var(--gold-soft));color:#151010;box-shadow:var(--shadow-soft);">
-              En savoir plus sur le droit des mineurs
+              Le droit des mineurs en pratique
             </a>
           </div>
         </article>
 
       </div>
 
-      <!-- DÉTAILS DROIT DES MINEURS : TIMELINE + MINI FAQ -->
+      <!-- Droit pénal : en pratique -->
+      <div id="penal-pratique" class="card" style="margin-top:2.2rem;">
+        <h3 style="margin-bottom:0.5rem;">Droit pénal : en pratique</h3>
+        <p style="font-size:0.94rem;color:var(--muted);max-width:46rem;">
+          En matière pénale, les décisions peuvent avoir des conséquences importantes sur votre liberté,
+          votre casier judiciaire ou votre situation professionnelle. En qualité d’<strong>avocat pénal à Liévin</strong>,
+          le cabinet vous accompagne devant le tribunal correctionnel, le juge d’instruction, le juge de l’application des peines
+          et en <strong>appel à Douai</strong>.
+        </p>
+
+        <ol class="timeline">
+          <li>
+            <strong>1. Premier contact (urgence possible)</strong>
+            Garde à vue, convocation, audition libre : un premier échange permet de vérifier les délais,
+            de prendre connaissance des documents reçus et d’identifier les urgences.
+          </li>
+          <li>
+            <strong>2. Analyse du dossier pénal</strong>
+            Étude des procès-verbaux, des déclarations, des pièces d’enquête et des éventuels éléments de défense
+            (alibis, témoignages, certificats, etc.).
+          </li>
+          <li>
+            <strong>3. Préparation de l’audience ou de l’interrogatoire</strong>
+            Explication du déroulement, préparation des réponses possibles, mise en place d’une stratégie
+            (contestation des faits, reconnaissance, demande d’aménagement…).
+          </li>
+          <li>
+            <strong>4. Après le jugement : appel & exécution</strong>
+            Analyse de la décision rendue, étude de l’opportunité d’un <strong>appel devant la cour d’appel de Douai</strong>
+            et accompagnement dans l’exécution de la peine (aménagement, conversions, demandes auprès du JAP).
+          </li>
+        </ol>
+
+        <div class="minors-faq">
+          <h4>Questions fréquentes en droit pénal</h4>
+
+          <details>
+            <summary>J’ai été placé en garde à vue, puis-je demander un avocat ?</summary>
+            <p>
+              Oui. Vous pouvez demander à être assisté par un avocat dès le début de la garde à vue.
+              Le cabinet peut être contacté pour vous assister lors de vos auditions.
+            </p>
+          </details>
+
+          <details>
+            <summary>Je ne suis pas d’accord avec le jugement, puis-je faire appel ?</summary>
+            <p>
+              Selon les délais légaux, un appel peut être formé devant la <strong>cour d’appel de Douai</strong>.
+              Le cabinet étudie avec vous l’intérêt de cet appel et les chances de succès.
+            </p>
+          </details>
+
+          <details>
+            <summary>Comment être indemnisé en tant que victime ?</summary>
+            <p>
+              Il est possible d’obtenir réparation en se constituant partie civile, mais aussi par des dispositifs
+              spécifiques : <strong>CIVI</strong> (commission d’indemnisation des victimes), <strong>Fonds de garantie</strong>
+              et <strong>SARVI</strong> (Service d’aide au recouvrement des victimes d’infractions), lorsque l’auteur
+              ne vous indemnise pas spontanément.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- Droit de la famille : en pratique -->
+      <div id="famille-pratique" class="card" style="margin-top:2.2rem;">
+        <h3 style="margin-bottom:0.5rem;">Droit de la famille : en pratique</h3>
+        <p style="font-size:0.94rem;color:var(--muted);max-width:46rem;">
+          En droit de la famille, l’accompagnement vise à rendre les procédures plus lisibles et à préserver,
+          autant que possible, le dialogue autour des enfants. Le cabinet intervient en <strong>divorce, séparation,
+          résidence des enfants et pensions alimentaires</strong> à Liévin, Lens, dans le bassin lensois et, en appel,
+          devant la cour d’appel de Douai.
+        </p>
+
+        <ol class="timeline">
+          <li>
+            <strong>1. Premier rendez-vous</strong>
+            Point sur votre situation familiale (mariage, PACS, concubinage), vos attentes et les difficultés rencontrées
+            (communication, violences, désaccords sur les enfants…).
+          </li>
+          <li>
+            <strong>2. Stratégie : accord ou procédure</strong>
+            Étude de la possibilité d’un accord amiable (divorce par consentement mutuel, convention parentale)
+            ou, à défaut, d’une saisine du juge aux affaires familiales.
+          </li>
+          <li>
+            <strong>3. Audience devant le juge</strong>
+            Préparation de l’audience (échanges écrits, pièces justificatives, projet d’organisation pour les enfants
+            et la pension alimentaire).
+          </li>
+          <li>
+            <strong>4. Après la décision : exécution & appel</strong>
+            Explication détaillée de la décision, mise en œuvre concrète des mesures et, si nécessaire, étude 
+            d’un <strong>appel à Douai</strong> ou d’une demande de révision en cas d’évolution de la situation.
+          </li>
+        </ol>
+
+        <div class="minors-faq">
+          <h4>Questions fréquentes en droit de la famille</h4>
+
+          <details>
+            <summary>Sommes-nous obligés de passer par un divorce amiable ?</summary>
+            <p>
+              Non. Lorsque l’accord n’est pas possible (sur les enfants ou les aspects financiers),
+              un divorce contentieux peut être envisagé. Le cabinet vous aide à déterminer la procédure la plus adaptée.
+            </p>
+          </details>
+
+          <details>
+            <summary>Comment est fixée la pension alimentaire ?</summary>
+            <p>
+              Le juge prend en compte vos ressources, celles de l’autre parent et les besoins concrets des enfants.
+              Des barèmes indicatifs existent, mais chaque situation est examinée au cas par cas.
+            </p>
+          </details>
+
+          <details>
+            <summary>Puis-je faire appel de la décision du juge aux affaires familiales ?</summary>
+            <p>
+              Oui, dans certains délais. Le cabinet peut vous assister pour un <strong>appel
+              devant la cour d’appel de Douai</strong> si la décision ne correspond pas à votre situation
+              ou si de nouveaux éléments sont apparus.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- Droit des mineurs : en pratique -->
       <div id="mineurs-details" class="card" style="margin-top:2.2rem;">
         <h3 style="margin-bottom:0.5rem;">Droit des mineurs : en pratique</h3>
         <p style="font-size:0.94rem;color:var(--muted);max-width:46rem;">
@@ -855,7 +1059,6 @@
           concrets sur le déroulement d’un dossier.
         </p>
 
-        <!-- Timeline simple -->
         <ol class="timeline">
           <li>
             <strong>1. Premier échange avec le cabinet</strong>
@@ -881,7 +1084,6 @@
           </li>
         </ol>
 
-        <!-- Mini FAQ -->
         <div class="minors-faq">
           <h4>Questions fréquentes en droit des mineurs</h4>
 
@@ -908,7 +1110,9 @@
             <p>
               Il est possible de déposer plainte ou de saisir les autorités compétentes. Le cabinet
               peut vous aider à structurer votre récit, à réunir les éléments utiles (certificats,
-              témoignages, échanges) et à accompagner le mineur lors de son audition.
+              témoignages, échanges) et à accompagner le mineur lors de son audition. Lorsque cela est
+              possible, les dispositifs d’indemnisation des victimes (CIVI, Fonds de garantie, SARVI)
+              sont également étudiés.
             </p>
           </details>
         </div>
@@ -925,7 +1129,8 @@
         <div class="section-kicker">Avis clients</div>
         <h2 class="section-title">Ils ont fait confiance au cabinet</h2>
         <p class="section-subtitle">
-          Découvrez les témoignages de clients accompagnés par Maître Behra.
+          Découvrez les témoignages de clients accompagnés par Maître Behra en droit pénal,
+          droit de la famille et droit des mineurs.
         </p>
       </div>
 
@@ -1002,13 +1207,11 @@
           selon votre situation et vos disponibilités.
         </p>
 
-        <!-- TARIF RAPPEL RDV -->
         <p style="margin-top:0.7rem;color:#d9dbee;">
           La première consultation est facturée <strong>60&nbsp;€ TTC</strong>.
           Ce montant n’est pas dû si vous êtes éligible à <strong>l’aide juridictionnelle</strong> ou en cas d’ouverture de dossier.
         </p>
 
-        <!-- MOYENS DE PAIEMENT RDV -->
         <p style="margin-top:0.4rem;color:#d9dbee;">
           Les règlements peuvent être effectués en espèces, par chèque, par virement bancaire, via PayPal
           ou par carte bancaire (en sans-contact ou via terminal SumUp).
@@ -1164,7 +1367,8 @@
         <h2 class="section-title">Venir au cabinet EB Avocat</h2>
         <p class="section-subtitle">
           Retrouvez la localisation précise du cabinet de Maître Eloïse Behra à Liévin et accédez en un clic
-          à l’itinéraire via Google Maps. Le cabinet se situe à proximité immédiate de Lens et du bassin lensois.
+          à l’itinéraire via Google Maps. Le cabinet se situe à proximité immédiate de Lens, du bassin lensois
+          et des axes menant à Douai.
         </p>
       </div>
 
@@ -1185,13 +1389,13 @@
 
           <p style="font-size:0.9rem;color:#55566a;margin-bottom:0.8rem;">
             Le cabinet se situe à Liévin, à proximité immédiate de Lens et des communes du bassin lensois
-            (Grenay, Mazingarbe, Loos-en-Gohelle, Vendin-le-Vieil, Wingles, Barlin, Houdain…).
-            L’itinéraire peut être généré automatiquement depuis votre smartphone ou GPS via Google Maps.
+            (Grenay, Mazingarbe, Loos-en-Gohelle, Vendin-le-Vieil, Wingles, Barlin, Houdain…) ainsi que
+            des axes menant à Douai et à la cour d’appel.
           </p>
 
           <ul style="margin-top:0.4rem;font-size:0.92rem;padding-left:1.2rem;">
             <li>Stationnement possible à proximité du cabinet</li>
-            <li>Accès simple depuis Lens et les communes environnantes</li>
+            <li>Accès simple depuis Lens, le bassin lensois et Douai</li>
           </ul>
 
           <div class="map-links">
@@ -1324,7 +1528,7 @@
         <a href="https://www.instagram.com/eb_avocat62"
            target="_blank"
            rel="noopener noreferrer">
-          Retrouvez-nous sur <strong>Instagram</strong> et accompagnez l’élégance de notre développement.
+          Retrouvez-nous sur <strong>Instagram</strong>.
         </a>
       </div>
 
